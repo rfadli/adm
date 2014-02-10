@@ -1,0 +1,20 @@
+table th, table td {
+  padding: 5px 10px;
+  border: 2px solid #EEF7FB;
+}
+table tr {
+  font: normal 14px Tahoma, Geneva, sans-serif;
+  background: #ECBE04;
+}
+table td {
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  -moz-transition: all 0.7s ease-in-out 0s;
+  -o-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out 0s;
+}
+table tr:nth-child(2n+0) {
+  background: #FAEEBC;
+}
+table td:hover, table td:nth-child(2n+0):hover {
+  background: #EEF7FB;
+}

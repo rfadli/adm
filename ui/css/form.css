@@ -1,0 +1,15 @@
+label{
+float: left;
+width: 120px;
+font-weight: bold;
+}
+
+input, textarea{
+width: 250px;
+margin-bottom: 5px;
+}
+
+fieldset{
+width: 700px;
+height: 1000px;
+}

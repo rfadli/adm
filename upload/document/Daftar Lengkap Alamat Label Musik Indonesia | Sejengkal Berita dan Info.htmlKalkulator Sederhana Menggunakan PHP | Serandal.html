@@ -1,0 +1,1585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head>
+<link href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html" rel="canonical">
+<!-- Blogger Default Meta -->
+<meta content="true" name="MSSmartTagsPreventParsing">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html" rel="canonical">
+<link href="https://plus.google.com/116707166807145045801" rel="me">
+<link href="http://www.blogger.com/openid-server.g" rel="openid.server">
+<link href="http://www.blogger.com/rsd.g?blogID=4405537116086833072" rel="EditURI" title="RSD" type="application/rsd xml">
+<link href="http://www.blogger.com/feeds/4405537116086833072/posts/default" rel="service.post" title="Serandal - Atom" type="application/atom+xml">
+<link href="http://www.http//serandal.blogspot.com/.com/feeds/posts/default" rel="alternate" title="Serandal - Atom" type="application/atom+xml">
+<!-- End Blogger Default Meta -->
+<title>Kalkulator Sederhana Menggunakan PHP | Serandal</title>
+<meta content="Kalkulator Sederhana Menggunakan PHP" name="subject">
+<meta content="Kalkulator Sederhana Menggunakan PHP" name="Abstract">
+<meta content="Serandal" name="copyright">
+<meta content="Serandal" name="author">
+<meta content="UTF-8" name="Charset">
+<meta content="Global" name="Distribution">
+<meta content="General" name="Rating">
+<meta content="INDEX FOLLOW" name="Robots">
+<meta content="1 days" name="revisit">
+<meta content="1 Days" name="Revisit-after">
+<meta content="ID" name="language">
+<meta content="ID" name="geo.country">
+<meta content="Indonesia" name="geo.placename">
+<meta content="global" name="distribution">
+<meta content="blogger" name="generator">
+<meta content="general" name="rating">
+<meta content="global" name="target">
+<meta content="index,follow,snipet" name="googlebot">
+<meta content="follow, all" name="Googlebot-Image">
+<meta content="follow, all" name="Scooter">
+<meta content="follow, all" name="msnbot">
+<meta content="follow, all" name="alexabot">
+<meta content="follow, all" name="Slurp">
+<meta content="follow, all" name="ZyBorg">
+<meta content="follow, all" name="Scooter">
+<meta content="ALL" name="SPIDERS">
+<meta content="ALL" name="WEBCRAWLERS">
+<link type="text/css" rel="stylesheet" href="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/103638431-widget_css_bundle.css">
+<link type="text/css" rel="stylesheet" href="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/authorization.css">
+<style id="page-skin-1" type="text/css"><!--
+/*
+Nama Template      		: Chibi Transparent V2
+Editing By              : Serandal
+Pembuat                 : http://Cirebon-Cyber4rt.blogspot.com/
+*/
+body .navbar, .home-link, .date-header, .icon-action, .status-msg-wrap, .widget-item-control, .feed-links, #skiplinks{display:none!important}
+*, .Header .description, .section, .widget, .widget .post-body ul, .widget ul, .crosscol .Header h1, .footer .widget li, .BlogArchive #ArchiveList ul.flat li{margin:0; padding:0; outline:none}
+.BlogArchive #ArchiveList ul li{padding-left:0; text-indent:0; line-height:1.1}
+#navbar-iframe{display:none !important}
+body{
+background:url() repeat-x; background-width:100% auto; background-position:bottom; background-attachment: fixed; margin:0; text-align:justify; font:normal 12px "lucida grande",tahoma,verdana,arial,sans-serif; color:#333; line-height:1.3em}
+a:hover{color:#A02D00;text-decoration:underline}
+a:visited{color:#0068b5;text-decoration:none}
+a{color:#0068b5;text-decoration:none}
+a.line-height:1.5em}
+a img{border-width:0}
+h1{font-size:40px; font-family:'Molengo',Trebuchet MS,Serif; font-weight:bold; color:#999; padding:5px 0; margin:0; line-height:1.2}
+h2{font-size:24px; font-family:'Molengo',Trebuchet MS,Serif; font-weight:bold; color:#999; padding:5px 0; margin:0; line-height:1.2}
+h3{font-size:22px; font-family:'Molengo',Trebuchet MS,Serif; font-weight:bold; color:#999; padding:5px 0; margin:0; line-height:1.2}
+h4{font-size:20px; font-family:'Molengo',Trebuchet MS,Serif; font-weight:bold; color:#999; padding:5px 0; margin:0; line-height:1.2}
+h5{font-size:18px; font-family:'Molengo',Trebuchet MS,Serif; font-weight:bold; color:#999; padding:5px 0; margin:0; line-height:1.2}
+/* Header */
+#header-wrapper{ background:transparent; -radius-topleft:30px; -radius-bottomright:30px; width:980px; height:92px; margin:0 auto 10px; padding:0px;}
+#header{float:left; width:490px; margin:0; text-align:left; color:#fff}
+#header h1{font-family:Georgia; font-size:40px; font-weight:bold; margin:0; padding:10px; color:#666; transform:none; line-height:1.0em}
+#header h1:hover{}
+#header a{color:#0068b5; text-decoration:none}
+#header a:hover{color:#A02D00;}
+#header .description{font-size:13px; font-family:'Rockwell',Trebuchet MS,Serif; font-weight:normal; color:#fff; margin:0; padding:0 10px; text-transform:none}
+#header img{margin:0 auto}
+#header-right{width:480px; float:right; padding:0; margin-top:9px}
+.right{padding-right:10px; margin:0}
+/* Menu Navigasi */
+#menu{height:40px; background:url() repeat-x; border:1px solid #ccc; border-radius:2px; display:block; padding:0px; font-size:14px; font-weight:normal; text-transform:none; margin-bottom:10px;}
+#menu ul{float:left; list-style:none; margin:0px; padding:0px;}
+#menu li{float:left; list-style:none; margin:0px; padding:0px}
+#menu li a, #menu li a:link, #menu li a:visited{color:#666; display:block; margin:0px; padding:10px}
+#menu li a:hover {color:#fff; background:#666; display:block; border-radius: 5px 5px 5px 5px ;}
+#menu li li a, #menu li li a:link, #menu li li a:visited{background:#fff; color:#000; width:162px;border:1px solid #ccc; font-weight:normal; float:none; margin:0; padding:7px 10px;
+}
+#menu li li a:hover, #menu li li a:active{background:#000; color:#fff; padding:7px 10px;}
+#menu li ul{z-index:9999; position:absolute; left:-999em; height:auto; width:160px; margin:0px; padding:10px}
+#menu li:hover ul, #menu li li:hover ul, #menu li li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul, #menu li li li.sfhover ul{left:auto}
+#menu li:hover, #menu li.sfhover{position:static}
+#menu li a:active{color:#f00; text-decoration:none}
+/* Width Wrap */
+#outer-wrapper{width:980px; margin:0 auto; padding:0}
+#mainright{width:790px; float:right; margin:0; padding:0; word-wrap:break-word; overflow:hidden}
+#main-wrapper{width:500px; float:left; margin:0; padding:0; word-wrap:break-word; overflow:hidden}
+#sidebarright-wrapper{width:280px; float:right; margin:0; padding:0; word-wrap:break-word; overflow:hidden}
+#sidebarleft-wrapper{width:180px; float:left; margin:0; padding:0; word-wrap:break-word; overflow:hidden}
+#bottom-wrapper{clear:both}
+/* Posts */
+h2.date-header{margin:0.5em 0 .1em; display:none}
+.post{margin-bottom:14px; padding:0}
+.post-title{opacity:0.9; background:transparent; border:1px solid #ccc; border-radius:2px; bottomright:15px; font-family:'Rockwell',Georgia,Serif; font-size:18px; margin-bottom:2px; padding:6px 10px 10px 10px; line-height:1.1em}
+.post-title:hover{style:none}
+.post-title a, .post-title a:visited, .post-title strong{display:block; color:#0068b5}
+.post-title strong, .post-title a:hover{color:#A02D00}
+.post-body{opacity:0.9; background:transparent; border:1px solid #ccc; border-radius-topleft:10px; border-radius-bottomright:10px; margin:0; padding:6px 6px 6px 6px}
+.post-body ul, .post-body ol{margin:0 0 10px 40px !important}
+.post-body li{padding-bottom:5px}
+.post-body blockquote {
+display: block;
+width: 450px;
+overflow:auto;
+max-height:200px;
+padding: 0px 10px 10px 10px;
+margin: auto;
+background:transparent;
+text-align: justify;
+font-size: 13px;
+border-left:double #00cc00;
+}
+.post-header{opacity:0.9; background:url('') repeat-x; padding:2px 10px; align:left;}
+.post-footer{margin:0; color:red; font-size:12px; padding:5px 5px; letter-spacing:.1em}
+.post-share-buttons{align:justify;}
+.post-comment-link{overflow:hidden; float:right}
+.post-author, .post-timestamp{color:#999; font-size:11px}
+.post-comment-link{float:right; padding:0; margin-left:10px; width:50px; height:40px; text-align:right}
+.post-comment-link a:link{color:red}
+/* Tabel */
+table{margin:0 0 20px 0; text-align:center; width:100%}
+tr th, thead th{background:transparent; font-weight:bold; line-height:18px; padding:10px 20px}
+tr td{border:1px solid #ccc; padding:5px 20px; text-align:center}
+ul{list-style:square}
+/* Sidebar */
+.sidebar{padding:0; margin:0}
+.sidebar h2{text-align:center; background:url() repeat-x; border:1px solid #ccc; border-radius-topleft:2px; border-radius-bottomright:2px; margin-bottom:5px; padding:9px 10px 10px 10px; color:#666; font-family:'Metamorphous',Georgia,Serif; font-size:14px; font-weight:bold
+}
+.sidebar h2:hover{style:none}
+.sidebar ul{margin:0; padding:0}
+.sidebar li{list-style:none; padding:4px 0; line-height:1.2em; margin:0; border-bottom:1px dotted #ccc}
+.sidebar .widget{opacity:0.9; margin-bottom:10px; padding:0}
+.sidebar .widget-content{background:transparent; border:1px solid #ccc; border-radius:2px; margin:0; padding:10px}
+.main .Blog{border-bottom-width:0}
+/* Bottom Wrap */
+#bottom1, #bottom2, #bottom3{width:240px;float:left;margin-right:6px}
+#bottom4{width:240px;float:left}
+.feed-links{clear:both; line-height:2.5em}
+#blog-pager-newer-link{float:left}
+#blog-pager-older-link{float:right}
+#blog-pager{clear:both; text-align:center}
+/* Comment */
+.comments{width:500px; float:left; overflow:auto; margin:15px 0 5px; padding:5px 0; border-top:2px solid #008000}
+#comments h4{font-family:'comic sans MS',Trebuchet MS,Serif; font-size:20px; font-weight:bold; letter-spacing:.1em; text-shadow:1px 1px 2px #292820; color:#fff; margin:0 0 10px; padding:0; text-transform:none}
+#comments-block{max-height:170px; border:0px dotted #eee; overflow:auto;line-height:1.4em; margin:10px 0 0 0}
+#comments-block .comment-author{margin:5px 0 0 20px; padding:3px 0; font-size:16px}
+#comments-block .avatar-image-container img{border:none; float:right; margin:0}
+#comments-block .avatar-image-container img{border:1px solid #050505; float:left; padding:0; margin:0; width:1px; height:40px; border-radius:2px; margin-left;}
+#comments-block .avatar-image-container.margin-left;}
+#comments-block .avatar-image-container.avatar-stock img{background:url(http://2.bp.blogspot.com/_aAjcAMHOGT4/TLsjMrwikII/AAAAAAAAFNs/kErRNHVNKI0/s1600/unknown.png) no-repeat center; border:1px solid #ccc}
+#comments-block.avatar-comment-indent dd{margin-left:20px}
+#comments-block .comment-body{margin:0; padding:5px 0}
+#comments-block .comment-footer{font-size:12px; text-align:left; margin:0 0 10px; padding:0; border-bottom:1px solid #0f0}
+#comments-block .comment-body p{margin:0; padding:0}
+.deleted-comment{font-style:italic; color:gray}
+/* Credit */
+.creditlink{width:980px; margin:10px auto; padding:6px 0; text-align:center; color:black; clear:both}
+. rbbox{border:1px solid #ccc; padding:5px; background-color:#fff; 5px; margin:5px}
+. rbbox:hover{background-color:#fff}
+#Label1 ul, #Label2 ul{list-style:none; margin:0 0 0; padding:0 0 8px}
+#Label1 li, #Label2 li{background:url(http://icons.iconarchive.com/icons/deleket/sleek-xp-basic/16/Folder-icon.png) no-repeat; padding-top:0; padding-right:0; padding-bottom:3px; padding-left:20px; margin-bottom:3px; border-bottom:1px dotted #063E3F; line-height:1.2em}
+.author-comments{background:#8B0000; border:1px Dotted #ffff00; padding:4px}
+a:hover{color:red; text-decoration:none; -webkit-transition:all 0.1s ease-in-out; -moz-transition:all 0.2s ease-in-out; -o-transition:all 0.2s ease-in-out; -ms-transition:all 0.1s ease-in-out}
+.post-body img{background-color:#fff;border:1px solid #333;margin:0 0px 0px ;padding:2px;border-radius:1px;}
+.kotakRSS1 {background-color: #fff; -moz-border-radius: 2px;-webkit-border-radius:2px; border: 1px solid #cccccc; padding:18px 10px 0 17px; margin: 0 0 10px 0; } .Rssardi33 { background: url('http://i1121.photobucket.com/albums/l513/iqbalkanci/CirebonFeeds.jpg') no-repeat bottom right; } .Rssardi33 a { background: none;}  .inpRssardi33 { border: 1px solid #B9C1C6; width: 170px;height: 16px; font-size: 12px; padding:3px 4px 4px 10px;-moz-border-radius:5px;-webkit-border-radius: 2px;} .sbmtRssardi33 {background:#9b9b9b;border: 1px #9b9b9b solid;color:#fff;font-size:13,5px;font-family:Arial,Tahoma,Verdana;margin-left:5px;padding:3px 5px 3px 5px;font-weight:bold;-moz-border-radius:7px;-webkit-border-radius: 7px;} .ardi33subs table {border-collapse: inherit; border: none;} .ardi33subs tr { border:0;} .ardi33subs td { border:0;} .ardi33subs th { border:0;} .clear { clear: both; }
+#Attribution1 {
+height:0px;
+visibility:hidden;
+display:none
+}
+#DADnavbar{
+font-family: Comic Sans Ms;
+font-size: 8pt; color: #00FF00;
+background:url(http://widgets.amung.us/classic/00/1.png) no-repeat center left fixed black;
+border: 3px double #00FF00;
+padding: 3px;
+z-index: 100000000;
+top: 2px; left: 2px; right: 2px;
+position: fixed;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-o-border-radius: 10px;
+}
+#DADnavbar .dmnavleft{float:left;font-weight:bold;padding:2px 10px;}
+#DADnavbar .dmnavright{float:right;padding:0px 2px;}
+.underpost{
+padding:10px;
+margin:10px 0px;
+background:#00FF00;
+border:1px solid #ddd;
+line-height:1.6em;}
+.rbbox{border: 1px solid rgb(192, 192, 192);padding: 5px;
+background-color: #ffffff;-moz-border-radius:5px; margin:5px;}
+.quickedit{
+display:none;
+}
+.breadcrumbs{border-bottom:1px dotted #999;margin:2em 0 0.5em;padding:0 0 0.5em;font-size:10px}
+h1.post-title, .post h1 #Blog1 h1, #Blog2 h1 { font-size:1.5em;
+}
+.permalinktag{margin-top:5px;border:1px solid #eff0f1;color:#424242;padding:5px;background:#fbfbef}.permalinktag a{background:0}img.float-right{margin:5px 0 0 10px}img.float-left{margin:5px 10px 0 0}#mn2{width:100%;height:28px;background:#1e90ff;border-top:1px solid #666;border-bottom:1px solid #666;margin-top:0;margin-left:0}
+.feed-links{
+display:none;
+}
+#breadcrumbs {
+padding:5px 5px 5px 0px;
+margin: 0px 0px 15px 0px;
+font-size:10px;
+line-height: 1.4em;
+border-bottom:3px double #333;
+}
+.dp-highlighter
+{
+font-family: "Consolas", "Monaco", "Courier New", Courier, monospace;
+font-size: 12px;
+background-color: #E7E5DC;
+width: 99%;
+overflow: auto;
+margin: 18px 0 18px 0 !important;
+padding-top: 1px; /* adds a little border on top when controls are hidden */
+}
+/* clear styles */
+.dp-highlighter ol,
+.dp-highlighter ol li,
+.dp-highlighter ol li span
+{
+margin: 0;
+padding: 0;
+border: none;
+}
+.dp-highlighter a,
+.dp-highlighter a:hover
+{
+background: none;
+border: none;
+padding: 0;
+margin: 0;
+}
+.dp-highlighter .bar
+{
+padding-left: 45px;
+}
+.dp-highlighter.collapsed .bar,
+.dp-highlighter.nogutter .bar
+{
+padding-left: 0px;
+}
+.dp-highlighter ol
+{
+list-style: decimal; /* for ie */
+background-color: #fff;
+margin: 0px 0px 1px 45px !important; /* 1px bottom margin seems to fix occasional Firefox scrolling */
+padding: 0px;
+color: #5C5C5C;
+}
+.dp-highlighter.nogutter ol,
+.dp-highlighter.nogutter ol li
+{
+list-style: none !important;
+margin-left: 0px !important;
+}
+.dp-highlighter ol li,
+.dp-highlighter .columns div
+{
+list-style: decimal-leading-zero; /* better look for others, override cascade from OL */
+list-style-position: outside !important;
+border-left: 3px solid #6CE26C;
+background-color: #F8F8F8;
+color: #5C5C5C;
+padding: 0 3px 0 10px !important;
+margin: 0 !important;
+line-height: 14px;
+}
+.dp-highlighter.nogutter ol li,
+.dp-highlighter.nogutter .columns div
+{
+border: 0;
+}
+.dp-highlighter .columns
+{
+background-color: #F8F8F8;
+color: gray;
+overflow: hidden;
+width: 100%;
+}
+.dp-highlighter .columns div
+{
+padding-bottom: 5px;
+}
+.dp-highlighter ol li.alt
+{
+background-color: #FFF;
+color: inherit;
+}
+.dp-highlighter ol li span
+{
+color: black;
+background-color: inherit;
+}
+/* Adjust some properties when collapsed */
+.dp-highlighter.collapsed ol
+{
+margin: 0px;
+}
+.dp-highlighter.collapsed ol li
+{
+display: none;
+}
+/* Additional modifications when in print-view */
+.dp-highlighter.printing
+{
+border: none;
+}
+.dp-highlighter.printing .tools
+{
+display: none !important;
+}
+.dp-highlighter.printing li
+{
+display: list-item !important;
+}
+/* Styles for the tools */
+.dp-highlighter .tools
+{
+padding: 3px 8px 3px 10px;
+font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+color: silver;
+background-color: #f8f8f8;
+padding-bottom: 10px;
+border-left: 3px solid #6CE26C;
+}
+.dp-highlighter.nogutter .tools
+{
+border-left: 0;
+}
+.dp-highlighter.collapsed .tools
+{
+border-bottom: 0;
+}
+.dp-highlighter .tools a
+{
+font-size: 9px;
+color: #a0a0a0;
+background-color: inherit;
+text-decoration: none;
+margin-right: 10px;
+}
+.dp-highlighter .tools a:hover
+{
+color: red;
+background-color: inherit;
+text-decoration: underline;
+}
+/* About dialog styles */
+.dp-about { background-color: #fff; color: #333; margin: 0px; padding: 0px; }
+.dp-about table { width: 100%; height: 100%; font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; }
+.dp-about td { padding: 10px; vertical-align: top; }
+.dp-about .copy { border-bottom: 1px solid #ACA899; height: 95%; }
+.dp-about .title { color: red; background-color: inherit; font-weight: bold; }
+.dp-about .para { margin: 0 0 4px 0; }
+.dp-about .footer { background-color: #ECEADB; color: #333; border-top: 1px solid #fff; text-align: right; }
+.dp-about .close { font-size: 11px; font-family: Tahoma, Verdana, Arial, sans-serif !important; background-color: #ECEADB; color: #333; width: 60px; height: 22px; }
+/* Language specific styles */
+.dp-highlighter .comment, .dp-highlighter .comments { color: #008200; background-color: inherit; }
+.dp-highlighter .string { color: blue; background-color: inherit; }
+.dp-highlighter .keyword { color: #069; font-weight: bold; background-color: inherit; }
+.dp-highlighter .preprocessor { color: gray; background-color: inherit; }
+/* Tambah kolom bawah */
+#footer-column-container {
+clear:both;
+}
+.footer-column {
+padding: 10px;
+}
+/* facebook comment */
+.comments-page { background-color: #f2f2f2;}#blogger-comments-page { padding: 0px 5px; display: none;}.comments-tab { float: left; padding: 5px; margin-right: 3px;cursor: pointer; background-color: #f2f2f2;}.comments-tab-icon { height: 14px; width: auto; margin-right: 3px;}.comments-tab:hover { background-color: #eeeeee;}.inactive-select-tab { background-color: #d1d1d1;}
+
+--></style>
+<script async="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/cbgapi.loaded_0"></script><script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/all_002.js" id="facebook-jssdk"></script><script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+var thumbnail_mode = "float" ;
+summary_noimg = 400;
+summary_img = 250;
+img_thumb_height = 51;
+img_thumb_width  = 51;
+</script>
+<script type="text/javascript">
+//<![CDATA[
+/*
+Auto-readmore link script, version 2.0 (for blogspot)
+(C)2008 by Anhvo
+visit http://en.vietwebguide.com to get more cool hacks
+*/
+function removeHtmlTag(strx,chop){
+if(strx.indexOf("<")!=-1)
+{
+var s = strx.split("<");
+for(var i=0;i<s.length;i++){
+if(s[i].indexOf(">")!=-1){
+s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length);
+}
+}
+strx = s.join("");
+}
+chop = (chop < strx.length-1) ? chop : strx.length-2;
+while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++;
+strx = strx.substring(0,chop-1);
+return strx+' ...';
+}
+function createSummaryAndThumb(pID){
+var div = document.getElementById(pID);
+var imgtag = "";
+var img = div.getElementsByTagName("img");
+var summ = summary_noimg;
+if(img.length>=1) {
+imgtag = '<span style="float:left; padding:0;margin:5px 10px 0 0"><img src="'+img[0].src+'" width="'+img_thumb_width+'px" height="'+img_thumb_height+'px"/></span>';
+summ = summary_img;
+}
+var summary = imgtag + '<div>' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+div.innerHTML = summary;
+}
+//]]>
+</script>
+<link href="" rel="icon" type="image/vnd.microsoft.icon">
+<script>jQuery.noConflict();</script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shCore.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushCpp.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushCSharp.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushCss.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushDelphi.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushJava.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushJScript.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushPhp.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushPython.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushRuby.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushSql.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushVb.asc" type="text/javascript"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/shBrushXml.asc" type="text/javascript"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36643057-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/all.js"></script>
+<script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/jquery-latest.js"></script>
+<meta content="%63%79%73%65%72%7A%2E%63%6F%2E%69%64" property="fb:admins">
+<script type="text/javascript">
+function commentToggle(selectTab) {
+$(".comments-tab").addClass("inactive-select-tab");
+$(selectTab).removeClass("inactive-select-tab");
+$(".comments-page").hide();
+$(selectTab + "-page").show();}
+</script>
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",k="?m=1";function l(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+k;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var m=l();m&&window.location.replace(m)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script><script type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/PHP"></script><link media="screen" href="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/inj_tf.css" rel="stylesheet" type="text/css"><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+.fbpluginrecommendationsbarleft{left:10px}
+.fbpluginrecommendationsbarright{right:10px}</style><script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/a" type="text/javascript" charset="utf-8"></script></head>
+<!-- <body><div></div> -->
+<body>
+<div><div itemscope="" itemtype="http://data-vocabulary.org/Review">
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/xd_arbiter.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/xd_arbiter_002.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/jv_ID/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+<div id="outer-wrapper"><div id="wrap2">
+<!-- skip links for text browsers -->
+<span id="skiplinks" style="display:none;">
+<a href="#main">skip to main </a> | <a href="#sidebar">skip to sidebar</a>
+</span>
+<div id="header-wrapper"><div id="header"><div class="header section" id="header"><div class="widget Header" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h1 class="title">
+<a href="http://serandal.blogspot.com/">Serandal</a>
+</h1>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>Just Another Blogspot Site \(^_^)/</span></p>
+</div>
+</div>
+</div></div></div><div id="header-right"><div class="right section" id="header-right"><div class="widget HTML" id="HTML3">
+<div class="widget-content">
+<div align="right">
+
+<a href="http://api.idhostinger.com/redir/435299" target="_blank"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/hostinger-468x60-1.gif" alt="Hosting Gratis" height="60" border="0" width="468"></a></div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=HTML&amp;widgetId=HTML3&amp;action=editWidget&amp;sectionId=header-right" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML3"));' target="configHTML3" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div></div></div><div id="menu" style="align:justify;">
+<ul style="align:justify;">
+<li><a href="http://serandal.blogspot.com/" title="">#Home</a></li>
+<li><a href="http://serandal.blogspot.com/search/label/PHP?max-results=3" target="_blank" title="PHP">#PHP</a></li>
+<li><a href="http://serandal.blogspot.com/search/label/CSS?max-results=3" target="_blank" title="CSS">#CSS</a></li>
+<li><a href="http://serandal.blogspot.com/search/label/JavaScript?max-results=3" target="_blank" title="JavaScript">#JavaScript</a></li>
+<li><a href="http://serandal.blogspot.com/search/label/jQuery?max-results=3" target="_blank" title="jQuery">#jQuery</a></li>
+<li><a href="http://www.alexa.com/siteinfo/http://serandal.blogspot.com" target="_blank" title="Alexa Rank">#Alexa Rank</a></li>
+<li><a href="http://live.feedjit.com/live/serandal.blogspot.com/0/" target="_blank" title="Live Traffic"> #Live Traffic</a></li>
+<li><a href="http://s51.sitemeter.com/stats.asp?site=s51Serandal" target="_blank" title="Sitemeter"> #Sitemeter</a></li>
+<li><a href="https://www.facebook.com/SerandalBlog" target="_blank" title="Contact Us"> #Contact Us</a></li>
+<li><a href="https://plus.google.com/116707166807145045801" target="_blank" title="Blogger Profile"> #Google Plus </a></li>
+<style type="text/css">
+.x{text-decoration:blink;}
+.x:hover{text-decoration:none;}
+</style>
+<li><a class="x" href="http://serandal.blogspot.com/2012/04/request-program.html" target="_blank" title="Request Program">#Request Program</a></li>
+</ul>
+</div>
+<div id="content-wrapper">
+<div id="mainright">
+<div id="main-wrapper">
+<div class="main section" id="main"><div class="widget Blog" id="Blog1">
+<div class="blog-posts hfeed">
+<!-- google_ad_section_start(name=default) -->
+ <div class="date-outer"> 
+<h2 class="date-header"><span>Friday, 19 October 2012</span></h2>
+ <div class="date-posts"> 
+<div class="post-outer">
+<div class="post hentry">
+<div id="breadcrumbs">Browse: <a href="http://serandal.blogspot.com/">Home</a> &gt; <a href="http://serandal.blogspot.com/search/label/PHP?max-results=3" rel="tag">PHP</a> &gt; <a href="">Kalkulator Sederhana Menggunakan PHP</a></div>
+<a name="7462842336264476843"></a>
+<h1 class="post-title entry-title">
+<span class="post-comment-link">
+<a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html#comment-form" onclick="">
+4</a>
+</span>
+<a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html">Kalkulator Sederhana Menggunakan PHP</a>
+</h1>
+<div class="post-header">
+<span class="post-author vcard">
+Posted by
+<span class="fn">Cyserz Rouly</span>
+</span>
+<span class="post-timestamp">
+at
+<a class="timestamp-link" href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html" rel="bookmark" title="permanent link"><abbr class="published" title="2012-10-19T20:42:00+07:00">20:42</abbr></a>
+</span>
+<span class="post-share-buttons">
+<a class="goog-inline-block share-button sb-email" href="http://www.blogger.com/share-post.g?blogID=7486360644741300760&amp;postID=7462842336264476843&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="http://www.blogger.com/share-post.g?blogID=7486360644741300760&amp;postID=7462842336264476843&amp;target=blog" onclick='window.open(this.href, "_blank", "height=270,width=475"); return false;' target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="http://www.blogger.com/share-post.g?blogID=7486360644741300760&amp;postID=7462842336264476843&amp;target=twitter" target="_blank" title="Share to Twitter"><span class="share-button-link-text">Share to Twitter</span></a><a class="goog-inline-block share-button sb-facebook" href="http://www.blogger.com/share-post.g?blogID=7486360644741300760&amp;postID=7462842336264476843&amp;target=facebook" onclick='window.open(this.href, "_blank", "height=430,width=640"); return false;' target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><div class="goog-inline-block dummy-container"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 20px;"><iframe title="+1" data-gapiattached="true" allowtransparency="true" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/fastbutton.html" name="I0_1375095906402" id="I0_1375095906402" vspace="0" tabindex="0" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div></div>
+</span>
+<div class="post-header-line-1"></div>
+</div>
+<div class="post-body entry-content">
+<div id="summary7462842336264476843"><div style="text-align: justify;">
+Pada postingan sebelumnya sudah dibahas bagaimana <a href="http://serandal.blogspot.com/2012/10/cara-membuat-form-upload-sederhana-menggunakan-php.html" target="_blank">cara membuat form upload dengan menggunakan PHP</a>.
+ Nah, pada kali ini akan dibahas bagaimana cara membuat kalkulator 
+sederhana dengan menggunakan PHP. Ok kita mulai saja. pastikan terlebih 
+dahulu <b>Apache service</b> <b>XAMPP</b> Anda sudah aktif. Lalu buka <b>Notepad</b> atau <b>DreamWeaver</b> Anda.</div>
+<div style="text-align: justify;">
+<br></div>
+<div style="text-align: justify;">
+<ul>
+<li>Buat sebuah file dengan nama <b>index.php</b></li>
+<li>Lalu copy dan paste kode berikut ke dalam file index.php tadi</li>
+<li>Berikut ini kodenya ( Klik <blink><b>view plain</b></blink> dan Copy kodenya ) :</li>
+</ul>
+</div>
+<br>
+<div>
+<div>
+</div>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol class="dp-xml"><li class="alt"><span><span>&lt;!DOCTYPE&nbsp;html&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;XHTML&nbsp;1.0&nbsp;Transitional//EN"&nbsp;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">html</span><span>&nbsp;</span><span class="attribute">xmlns</span><span>=</span><span class="attribute-value">"http://www.w3.org/1999/xhtml"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">meta</span><span>&nbsp;</span><span class="attribute">http-equiv</span><span>=</span><span class="attribute-value">"Content-Type"</span><span>&nbsp;</span><span class="attribute">content</span><span>=</span><span class="attribute-value">"text/html;&nbsp;charset=utf-8"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>Untitled&nbsp;Document</span><span class="tag">&lt;/</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">style</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text/css"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>body,td,th&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;color:&nbsp;#000;&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li><li class=""><span>.putih{&nbsp;color:white;}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">style</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"lat2.php"</span><span>&nbsp;</span><span class="attribute">method</span><span>=</span><span class="attribute-value">"post"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">div</span><span>&nbsp;</span><span class="attribute">align</span><span>=</span><span class="attribute-value">"center"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&amp;nbsp;</span><span class="tag">&lt;/</span><span class="tag-name">p</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">table</span><span>&nbsp;</span><span class="attribute">width</span><span>=</span><span class="attribute-value">"381"</span><span>&nbsp;</span><span class="attribute">height</span><span>=</span><span class="attribute-value">"140"</span><span>&nbsp;</span><span class="attribute">border</span><span>=</span><span class="attribute-value">"1"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">colspan</span><span>=</span><span class="attribute-value">"2"</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#333333"</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">div</span><span>&nbsp;</span><span class="attribute">align</span><span>=</span><span class="attribute-value">"center"</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"putih"</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span>Program&nbsp;Kalkulator&nbsp;Sederhana</span><span class="tag">&lt;/</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span>Nilai&nbsp;Pertama</span><span class="tag">&lt;/</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span>&amp;nbsp;</span><span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"nilai1"</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span>Operator</span><span class="tag">&lt;/</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span>&amp;nbsp;</span><span class="tag">&lt;</span><span class="tag-name">select</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"operator"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>Penjumlahan</span><span class="tag">&lt;/</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>Pengurangan</span><span class="tag">&lt;/</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>Perkalian</span><span class="tag">&lt;/</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>Pembagian</span><span class="tag">&lt;/</span><span class="tag-name">option</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">select</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span class="tag">&lt;</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span>Nilai&nbsp;Kedua</span><span class="tag">&lt;/</span><span class="tag-name">strong</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span>&amp;nbsp;</span><span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"nilai2"</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span>&amp;nbsp;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">td</span><span>&nbsp;</span><span class="attribute">bgcolor</span><span>=</span><span class="attribute-value">"#CCCCCC"</span><span class="tag">&gt;</span><span>&amp;nbsp;</span><span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">""</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"Hitung"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span class="tag">&lt;/</span><span class="tag-name">td</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">tr</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">table</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre style="display: none;" class="html" name="code">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;Untitled Document&lt;/title&gt;
+&lt;style type="text/css"&gt;
+body,td,th {
+ color: #000;
+}
+.putih{ color:white;}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;form action="lat2.php" method="post"&gt;
+
+  &lt;div align="center"&gt;
+    &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+    &lt;table width="381" height="140" border="1"&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2" bgcolor="#333333"&gt;&lt;div align="center" class="putih"&gt;&lt;strong&gt;Program Kalkulator Sederhana&lt;/strong&gt;&lt;/div&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&lt;strong&gt;Nilai Pertama&lt;/strong&gt;&lt;/td&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&amp;nbsp;&lt;input name="nilai1" type="text" /&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&lt;strong&gt;Operator&lt;/strong&gt;&lt;/td&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&amp;nbsp;&lt;select name="operator"&gt;
+          &lt;option&gt;Penjumlahan&lt;/option&gt;
+          &lt;option&gt;Pengurangan&lt;/option&gt;
+          &lt;option&gt;Perkalian&lt;/option&gt;
+          &lt;option&gt;Pembagian&lt;/option&gt;
+        &lt;/select&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&lt;strong&gt;Nilai Kedua&lt;/strong&gt;&lt;/td&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&amp;nbsp;&lt;input name="nilai2" type="text" /&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;td bgcolor="#CCCCCC"&gt;&amp;nbsp;&lt;input name="" type="submit" value="Hitung" /&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<br>
+<br>
+<ul>
+<li>Seperti biasa, simpan di folder C:/xampp/htdocs/NamaFolderAnda dengan nama index.php&nbsp;</li>
+<li>Buatlah 1 file bernama<b> hasil.php</b></li>
+<li>Lalu Paste kode berikut :&nbsp;</li>
+</ul>
+<div>
+<br></div>
+</div>
+<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;">view plain</a><a href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;">print</a><a href="#" onclick="dp.sh.Toolbar.Command('About',this);return false;">?</a></div></div><ol class="dp-c"><li class="alt"><span><span>&lt;!DOCTYPE&nbsp;html&nbsp;PUBLIC&nbsp;</span><span class="string">"-//W3C//DTD&nbsp;XHTML&nbsp;1.0&nbsp;Transitional//EN"</span><span>&nbsp;</span><span class="string">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span><span>&gt;&nbsp;&nbsp;</span></span></li><li class=""><span>&lt;html&nbsp;xmlns=<span class="string">"http://www.w3.org/1999/xhtml"</span><span>&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&lt;head&gt;&nbsp;&nbsp;</span></li><li class=""><span>&lt;meta&nbsp;http-equiv=<span class="string">"Content-Type"</span><span>&nbsp;content=</span><span class="string">"text/html;&nbsp;charset=utf-8"</span><span>&nbsp;/&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&lt;title&gt;Untitled&nbsp;Document&lt;/title&gt;&nbsp;&nbsp;</span></li><li class=""><span>&lt;/head&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&lt;body&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&lt;?php&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="vars">$nilai1</span><span>&nbsp;=&nbsp;</span><span class="vars">$_POST</span><span>[</span><span class="string">'nilai1'</span><span>];&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="vars">$nilai2</span><span>&nbsp;=&nbsp;</span><span class="vars">$_POST</span><span>[</span><span class="string">'nilai2'</span><span>];&nbsp;&nbsp;</span></span></li><li class=""><span><span class="vars">$operator</span><span>&nbsp;=&nbsp;</span><span class="vars">$_POST</span><span>[</span><span class="string">'operator'</span><span>];&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">if</span><span>&nbsp;(</span><span class="vars">$operator</span><span>&nbsp;==&nbsp;</span><span class="string">"Penjumlahan"</span><span>)&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;<span class="vars">$hasil</span><span>&nbsp;=&nbsp;</span><span class="vars">$nilai1</span><span>&nbsp;+&nbsp;</span><span class="vars">$nilai2</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;<span class="vars">$tanda</span><span>&nbsp;=&nbsp;</span><span class="string">"+"</span><span>;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">else</span><span>&nbsp;</span><span class="keyword">if</span><span>&nbsp;(</span><span class="vars">$operator</span><span>&nbsp;==&nbsp;</span><span class="string">"Pengurangan"</span><span>)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;<span class="vars">$hasil</span><span>&nbsp;=&nbsp;</span><span class="vars">$nilai1</span><span>&nbsp;-&nbsp;</span><span class="vars">$nilai2</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;<span class="vars">$tanda</span><span>&nbsp;=&nbsp;</span><span class="string">"-"</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">else</span><span>&nbsp;</span><span class="keyword">if</span><span>&nbsp;(</span><span class="vars">$operator</span><span>&nbsp;==&nbsp;</span><span class="string">"Perkalian"</span><span>)&nbsp;&nbsp;</span></span></li><li class="alt"><span>{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;<span class="vars">$hasil</span><span>&nbsp;=&nbsp;</span><span class="vars">$nilai1</span><span>&nbsp;*&nbsp;</span><span class="vars">$nilai2</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;<span class="vars">$tanda</span><span>&nbsp;=&nbsp;</span><span class="string">"*"</span><span>;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">else</span><span>&nbsp;</span><span class="keyword">if</span><span>&nbsp;(</span><span class="vars">$operator</span><span>&nbsp;==&nbsp;</span><span class="string">"Pembagian"</span><span>)&nbsp;&nbsp;</span></span></li><li class=""><span>{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;<span class="vars">$hasil</span><span>&nbsp;=&nbsp;</span><span class="vars">$nilai1</span><span>&nbsp;/&nbsp;</span><span class="vars">$nilai2</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;<span class="vars">$tanda</span><span>&nbsp;=&nbsp;</span><span class="string">"/"</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;?&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&lt;div&nbsp;align=<span class="string">"center"</span><span>&gt;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&lt;table&nbsp;width=<span class="string">"411"</span><span>&nbsp;height=</span><span class="string">"156"</span><span>&nbsp;border=</span><span class="string">"1"</span><span>&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;colspan=<span class="string">"2"</span><span>&gt;&lt;div&nbsp;align=</span><span class="string">"center"</span><span>&gt;Hasil&nbsp;Perhitungan&lt;/div&gt;&lt;/td&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Nilai&nbsp;Pertama&lt;/td&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&amp;nbsp;&nbsp;&lt;?php&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"$nilai1"</span><span>;&nbsp;?&gt;&lt;/td&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Operator&lt;/td&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&amp;nbsp;&nbsp;&lt;?php&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"$tanda"</span><span>;&nbsp;?&gt;&lt;/td&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Nilai&nbsp;kedua&lt;/td&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&amp;nbsp;&nbsp;&lt;?php&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"$nilai2"</span><span>;&nbsp;?&gt;&lt;/td&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Hasil&lt;/td&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&amp;nbsp;&nbsp;&lt;?php&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">"$hasil"</span><span>;&nbsp;?&gt;&lt;/td&gt;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&lt;/table&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&lt;/div&gt;&nbsp;&nbsp;</span></li><li class=""><span>&lt;/body&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&lt;/html&gt;&nbsp;&nbsp;</span></li></ol></div><pre style="display: none;" class="php" name="code">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;Untitled Document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;?php
+
+$nilai1 = $_POST['nilai1'];
+$nilai2 = $_POST['nilai2'];
+$operator = $_POST['operator'];
+
+if ($operator == "Penjumlahan")
+{
+ $hasil = $nilai1 + $nilai2;
+ $tanda = "+"; 
+ }
+else if ($operator == "Pengurangan")
+{
+ $hasil = $nilai1 - $nilai2;
+ $tanda = "-";
+ }
+else if ($operator == "Perkalian")
+{
+ $hasil = $nilai1 * $nilai2;
+ $tanda = "*"; 
+ }
+else if ($operator == "Pembagian")
+{
+ $hasil = $nilai1 / $nilai2;
+ $tanda = "/";
+ }
+
+
+ ?&gt;
+
+
+&lt;div align="center"&gt;
+  &lt;table width="411" height="156" border="1"&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;&lt;div align="center"&gt;Hasil Perhitungan&lt;/div&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Nilai Pertama&lt;/td&gt;
+      &lt;td&gt;&amp;nbsp; &lt;?php echo "$nilai1"; ?&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Operator&lt;/td&gt;
+      &lt;td&gt;&amp;nbsp; &lt;?php echo "$tanda"; ?&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Nilai kedua&lt;/td&gt;
+      &lt;td&gt;&amp;nbsp; &lt;?php echo "$nilai2"; ?&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hasil&lt;/td&gt;
+      &lt;td&gt;&amp;nbsp; &lt;?php echo "$hasil"; ?&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+<ul>
+<li>Simpan dengan nama <b>hasil.php</b></li>
+<li>Buka browser Anda lalu ketikan <b>http://localhost/kalkulator/ </b></li>
+<li>kira-kira seperti ini</li>
+</ul>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://3.bp.blogspot.com/-VGpqY6z-eWY/UH648q2qpRI/AAAAAAAAAC8/SzLKRqTQfx0/s1600/calc.PNG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/calc_003.PNG" border="0"></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<br></div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: justify;">
+</div>
+<ul>
+<li>kemudian akan tampil form input sebagai berikut : </li>
+</ul>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://2.bp.blogspot.com/-my9ieyXYsDk/UH651YOHG4I/AAAAAAAAADM/JNjjMgyTlxc/s1600/calc.PNG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/calc.PNG" height="125" border="0" width="320"></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<br></div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: justify;">
+</div>
+<ul>
+<li>Coba inputkan nilai lalu klik <b>Hitung</b></li>
+<li>Maka hasilnya akan sebagai berikut (<b>file hasil.php</b>): </li>
+</ul>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="http://2.bp.blogspot.com/-nOas7PrP9bo/UH66aLvNvKI/AAAAAAAAADU/fO2KBLyNK4U/s1600/calc.PNG" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/calc_002.PNG" height="125" border="0" width="320"></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<br></div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: justify;">
+</div>
+<ul>
+<li>Untuk tabel hasil perhitungan bisa Anda rubah sendiri sesuai selera.</li>
+<li>Sekian dulu postingan pada hari ini \^.^/</li>
+<li>Please Comment . . . . Hahahah</li>
+</ul>
+
+
+
+
+Description: <span itemprop="description">Kalkulator Sederhana Menggunakan PHP</span>
+Rating: <span itemprop="rating">4.5</span> 
+Reviewer: <span itemprop="reviewer">Cyserz Rouly</span> -
+ItemReviewed: <span itemprop="itemreviewed">Kalkulator Sederhana Menggunakan PHP</span>
+<div class="bloglano_permalink" style="border:2px dashed red;background:#fff;padding:10px 5px 5px 10px;text-align:justify"><center><small>Anda sedang membaca artikel tentang <strong><u>Kalkulator Sederhana Menggunakan PHP</u></strong> dan Anda bisa menemukan artikel Kalkulator Sederhana Menggunakan PHP ini dengan url <strong>http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html</strong>, Anda boleh menyebar luaskannya atau mengcopy paste-nya jika artikel <strong>Kalkulator Sederhana Menggunakan PHP</strong> ini sangat bermanfaat bagi teman-teman Anda, namun jangan lupa untuk meletakkan link <u><a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html">Kalkulator Sederhana Menggunakan PHP</a></u> sebagai sumbernya.</small></center></div><iframe allowtransparency="true" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/like.html" style="border:none; overflow:hidden; width:450px; height:40px;" frameborder="0" scrolling="no"></iframe><br><br><h2>Related Post:</h2><div class="rbbox"><div style="margin:0; padding:10px;height:200px;overflow:auto;border:1px solid #ccc;"><div id="albri"><div><b>PHP</b><ul><li><a href="http://serandal.blogspot.com/2012/10/contoh-program-aplikasi-penjualan-dengan-php.html">Contoh Program Penjualan Sederhana Dengan PHP</a></li><li><a href="http://serandal.blogspot.com/2012/10/cara-membuat-form-upload-sederhana-menggunakan-php.html">Cara Membuat Form Upload Foto Sederhana (PHP)</a></li></ul></div></div><script type="text/javascript">var homeUrl3 = "http://serandal.blogspot.com/";var maxNumberOfPostsPerLabel = 4;var maxNumberOfLabels = 10;maxNumberOfPostsPerLabel = 10;maxNumberOfLabels = 3;function listEntries10(json) {var ul = document.createElement('ul');var maxPosts = (json.feed.entry.length <= maxNumberOfPostsPerLabel) ?json.feed.entry.length : maxNumberOfPostsPerLabel;for (var i = 0; i < maxPosts; i++) {var entry = json.feed.entry[i];var alturl;for (var k = 0; k < entry.link.length; k++) {if (entry.link[k].rel == 'alternate') {alturl = entry.link[k].href;break;}}var li = document.createElement('li');var a = document.createElement('a');a.href = alturl;if(a.href!=location.href) {var txt = document.createTextNode(entry.title.$t);a.appendChild(txt);li.appendChild(a);ul.appendChild(li);}}for (var l = 0; l < json.feed.link.length; l++) {if (json.feed.link[l].rel == 'alternate') {var raw = json.feed.link[l].href;var label = raw.substr(homeUrl3.length+13);var k;for (k=0; k<20; k++) label = label.replace("%20", " ");var txt = document.createTextNode(label);var h = document.createElement('b');h.appendChild(txt);var div1 = document.createElement('div');div1.appendChild(h);div1.appendChild(ul);document.getElementById('albri').appendChild(div1);}}}function search10(query, label) {var script = document.createElement('script');script.setAttribute('src', query + 'feeds/posts/default/-/'+ label +'?alt=json-in-script&callback=listEntries10');script.setAttribute('type', 'text/javascript');document.documentElement.firstChild.appendChild(script);}var labelArray = new Array();var numLabel = 0;textLabel = "PHP";var test = 0;for (var i = 0; i < labelArray.length; i++)if (labelArray[i] == textLabel) test = 1;if (test == 0) {labelArray.push(textLabel);var maxLabels = (labelArray.length <= maxNumberOfLabels) ?labelArray.length : maxNumberOfLabels;if (numLabel < maxLabels) {search10(homeUrl3, textLabel);numLabel++;}}</script></div><script type="text/javascript">RelPost();</script></div><div id="related-posts"><font face="Arial" size="3"><b>Related Posts To This Article : </b></font><font color="#FFFFFF"><script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/PHP_002" type="text/javascript"></script>
+</font><script type="text/javascript"> removeRelatedDuplicates(); printRelatedLabels();</script></div></div>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1"><span class="post-icons">
+<span class="item-control blog-admin pid-926434539">
+<a href="http://www.blogger.com/post-edit.g?blogID=7486360644741300760&amp;postID=7462842336264476843&amp;from=pencil" title="Edit Post">
+<img alt="" class="icon-action" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_edit_allbkg.gif" height="18" width="18">
+</a>
+</span>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-2"><span class="post-labels">
+Labels:
+<a href="http://serandal.blogspot.com/search/label/PHP?max-results=3" rel="tag">PHP</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3"><span class="post-location">
+</span>
+</div>
+</div>
+</div>
+<div class="comments" id="comments">
+<div class="comments-tab" id="fb-comments" onclick='javascript:commentToggle("#fb-comments");' title="Comments made with Facebook"><img class="comments-tab-icon" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/eIpbnVKI9lR.png"><fb:comments-count class=" fb_comments_count_zero" fb-xfbml-state="rendered" href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html"><span class="fb_comments_count">0</span></fb:comments-count> Comments</div><div class="comments-tab inactive-select-tab" id="blogger-comments" onclick='javascript:commentToggle("#blogger-comments");' title="Comments from Blogger"><img class="comments-tab-icon" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon_logo32.gif">
+4 Comments</div><div class="clear"></div></div><div class="comments-page" id="fb-comments-page"><div id="fb-root"></div><fb:comments class="fb_iframe_widget" fb-xfbml-state="rendered" href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html" num_posts="5" width="450"><span style="height: 160px; width: 450px;"><iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/comments.html" class="fb_ltr" title="Facebook Social Plugin" style="border: medium none; overflow: hidden; height: 160px; width: 450px;" name="f15121827c6bc" id="f1393d9fdd18d7a" scrolling="no"></iframe></span></fb:comments></div><div class="comments comments-page" id="blogger-comments-page">
+<a name="comments"></a>
+<h4>
+4
+comments: 
+</h4>
+<div id="Blog1_comments-block-wrapper">
+<dl class="avatar-comment-indent" id="comments-block">
+<dt class="comment-author " id="c8972998816489562277">
+<a name="c8972998816489562277"></a>
+<div class="avatar-image-container vcard"><span dir="ltr"><a href="http://www.blogger.com/profile/15548492706597556184" rel="nofollow" onclick="" class="avatar-hovercard" id="av-0-15548492706597556184"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/Untitled-1.jpg" alt="" class="delayLoad" style="" longdesc="http://4.bp.blogspot.com/-i-1_2JJn8Qs/UBCfWVVILyI/AAAAAAAAABg/lxwYoEEXRl0/s45/Untitled-1.jpg" title="Payahe-Cyber" height="35" width="35">
+
+<noscript><img src="http://4.bp.blogspot.com/-i-1_2JJn8Qs/UBCfWVVILyI/AAAAAAAAABg/lxwYoEEXRl0/s45/Untitled-1.jpg" width="35" height="35" class="photo" alt=""></noscript></a></span></div>
+<a href="http://www.blogger.com/profile/15548492706597556184" rel="nofollow">Payahe-Cyber</a>
+said...
+<a href="https://www.blogger.com/comment.g?blogID=4405537116086833072&amp;postID=7462842336264476843&amp;isPopup=true&amp;postBody=%40%3C%61%20%68%72%65%66%3D%22%23c8972998816489562277%22%3EPayahe-Cyber%3C%2F%61%3E%3A%20#form" onclick='javascript:window.open (this.href,"bloggerPopup","toolbar=0,location=0,statusbar=1,menubar=0,scrollbars=yes,width=450,height=450,");return false;' style="padding:0px 5px; border:1px solid #ddd; float:right">Reply Comment</a>
+</dt>
+<dd class="comment-body" id="Blog1_cmt-8972998816489562277">
+<p>
+Likee This...<br>gw Baru Aja Belajar Gan...<br>Mantaapzzzz<br>
+</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html?showComment=1350669884199#c8972998816489562277" title="comment permalink">
+20 October 2012 01:04
+</a>
+<span class="item-control blog-admin pid-2063225215">
+<a class="comment-delete" href="http://www.blogger.com/delete-comment.g?blogID=7486360644741300760&amp;postID=8972998816489562277" title="Delete Comment">
+<img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+<dt class="comment-author blog-author" id="c4683933513326164194">
+<a name="c4683933513326164194"></a>
+<div class="avatar-image-container vcard"><span dir="ltr"><a href="http://www.blogger.com/profile/13548718726001875220" rel="nofollow" onclick="" class="avatar-hovercard" id="av-1-13548718726001875220"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/photo.jpg" alt="" class="delayLoad" style="" longdesc="//lh4.googleusercontent.com/-8SzoLsWWatU/AAAAAAAAAAI/AAAAAAAAADs/M0GQuhheXgw/s512-c/photo.jpg" title="Cyserz Rouly" height="35" width="35">
+
+<noscript><img src="//lh4.googleusercontent.com/-8SzoLsWWatU/AAAAAAAAAAI/AAAAAAAAADs/M0GQuhheXgw/s512-c/photo.jpg" width="35" height="35" class="photo" alt=""></noscript></a></span></div>
+<a href="http://www.blogger.com/profile/13548718726001875220" rel="nofollow">Cyserz Rouly</a>
+said...
+<a href="https://www.blogger.com/comment.g?blogID=4405537116086833072&amp;postID=7462842336264476843&amp;isPopup=true&amp;postBody=%40%3C%61%20%68%72%65%66%3D%22%23c4683933513326164194%22%3ECyserz%20Rouly%3C%2F%61%3E%3A%20#form" onclick='javascript:window.open (this.href,"bloggerPopup","toolbar=0,location=0,statusbar=1,menubar=0,scrollbars=yes,width=450,height=450,");return false;' style="padding:0px 5px; border:1px solid #ddd; float:right">Reply Comment</a>
+</dt>
+<dd class="comment-body" id="Blog1_cmt-4683933513326164194">
+<p>
+asulah
+</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html?showComment=1350670154122#c4683933513326164194" title="comment permalink">
+20 October 2012 01:09
+</a>
+<span class="item-control blog-admin pid-926434539">
+<a class="comment-delete" href="http://www.blogger.com/delete-comment.g?blogID=7486360644741300760&amp;postID=4683933513326164194" title="Delete Comment">
+<img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+<dt class="comment-author " id="c6832339911657207980">
+<a name="c6832339911657207980"></a>
+<div class="avatar-image-container vcard"><span dir="ltr"><a href="http://www.blogger.com/profile/15548492706597556184" rel="nofollow" onclick="" class="avatar-hovercard" id="av-2-15548492706597556184"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/Untitled-1.jpg" alt="" class="delayLoad" style="" longdesc="http://4.bp.blogspot.com/-i-1_2JJn8Qs/UBCfWVVILyI/AAAAAAAAABg/lxwYoEEXRl0/s45/Untitled-1.jpg" title="Payahe-Cyber" height="35" width="35">
+
+<noscript><img src="http://4.bp.blogspot.com/-i-1_2JJn8Qs/UBCfWVVILyI/AAAAAAAAABg/lxwYoEEXRl0/s45/Untitled-1.jpg" width="35" height="35" class="photo" alt=""></noscript></a></span></div>
+<a href="http://www.blogger.com/profile/15548492706597556184" rel="nofollow">Payahe-Cyber</a>
+said...
+<a href="https://www.blogger.com/comment.g?blogID=4405537116086833072&amp;postID=7462842336264476843&amp;isPopup=true&amp;postBody=%40%3C%61%20%68%72%65%66%3D%22%23c6832339911657207980%22%3EPayahe-Cyber%3C%2F%61%3E%3A%20#form" onclick='javascript:window.open (this.href,"bloggerPopup","toolbar=0,location=0,statusbar=1,menubar=0,scrollbars=yes,width=450,height=450,");return false;' style="padding:0px 5px; border:1px solid #ddd; float:right">Reply Comment</a>
+</dt>
+<dd class="comment-body" id="Blog1_cmt-6832339911657207980">
+<p>
+Numpang Posting yaa,,,,<br>Link Sumber, Gampanglah tuh,,,,hahahaha
+</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html?showComment=1351509748816#c6832339911657207980" title="comment permalink">
+29 October 2012 18:22
+</a>
+<span class="item-control blog-admin pid-2063225215">
+<a class="comment-delete" href="http://www.blogger.com/delete-comment.g?blogID=7486360644741300760&amp;postID=6832339911657207980" title="Delete Comment">
+<img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+<dt class="comment-author blog-author" id="c855797239159763196">
+<a name="c855797239159763196"></a>
+<div class="avatar-image-container vcard"><span dir="ltr"><a href="http://www.blogger.com/profile/13548718726001875220" rel="nofollow" onclick="" class="avatar-hovercard" id="av-3-13548718726001875220"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/photo.jpg" alt="" class="delayLoad" style="" longdesc="//lh4.googleusercontent.com/-8SzoLsWWatU/AAAAAAAAAAI/AAAAAAAAADs/M0GQuhheXgw/s512-c/photo.jpg" title="Cyserz Rouly" height="35" width="35">
+
+<noscript><img src="//lh4.googleusercontent.com/-8SzoLsWWatU/AAAAAAAAAAI/AAAAAAAAADs/M0GQuhheXgw/s512-c/photo.jpg" width="35" height="35" class="photo" alt=""></noscript></a></span></div>
+<a href="http://www.blogger.com/profile/13548718726001875220" rel="nofollow">Cyserz Rouly</a>
+said...
+<a href="https://www.blogger.com/comment.g?blogID=4405537116086833072&amp;postID=7462842336264476843&amp;isPopup=true&amp;postBody=%40%3C%61%20%68%72%65%66%3D%22%23c855797239159763196%22%3ECyserz%20Rouly%3C%2F%61%3E%3A%20#form" onclick='javascript:window.open (this.href,"bloggerPopup","toolbar=0,location=0,statusbar=1,menubar=0,scrollbars=yes,width=450,height=450,");return false;' style="padding:0px 5px; border:1px solid #ddd; float:right">Reply Comment</a>
+</dt>
+<dd class="comment-body" id="Blog1_cmt-855797239159763196">
+<p>
+Ya, Terserah Anda . . . . .
+</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html?showComment=1351528000452#c855797239159763196" title="comment permalink">
+29 October 2012 23:26
+</a>
+<span class="item-control blog-admin pid-926434539">
+<a class="comment-delete" href="http://www.blogger.com/delete-comment.g?blogID=7486360644741300760&amp;postID=855797239159763196" title="Delete Comment">
+<img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+</dl>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<h4 id="comment-post-message">Post a Comment</h4>
+<p>
+</p>
+<a href="http://www.blogger.com/comment-iframe.g?blogID=7486360644741300760&amp;postID=7462842336264476843&amp;blogspotRpcToken=394364" id="comment-editor-src"></a>
+<iframe allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" id="comment-editor" name="comment-editor" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/comment-iframe.html" frameborder="0" height="280px" width="100%"></iframe>
+<script type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/1785371609-comment_from_post_iframe.js"></script>
+<script type="text/javascript"> BLOG_CMT_createIframe('http://www.blogger.com/rpc_relay.html', '16646648505479367704'); </script>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+</div>
+ </div></div> 
+<!-- google_ad_section_end -->
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://serandal.blogspot.com/2012/10/contoh-program-aplikasi-penjualan-dengan-php.html" id="Blog1_blog-pager-newer-link" title="Newer Post">Newer Post</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://serandal.blogspot.com/2012/10/cara-membuat-form-upload-sederhana-menggunakan-php.html" id="Blog1_blog-pager-older-link" title="Older Post">Older Post</a>
+</span>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+</div>
+</div><div class="widget HTML" id="HTML4">
+<div class="widget-content">
+<center>
+<!-- Site Meter -->
+<a id="idSiteMeterHREF" href="http://www.sitemeter.com/stats.asp?site=s51serandal" target="_top"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/meter.gif" alt="Site Meter" border="0"></a><iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/a.html" frameborder="0" height="0" width="0"></iframe><script type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/counter.js">
+</script>
+</center>
+
+<style type="text/css">
+/* Message Box */
+#box-message {
+position:fixed !important;
+position:absolute;
+top:-1000px;
+left:50%;
+margin:0px 0px 0px -182px;
+width:300px;
+height:auto;
+padding:16px;
+background:#fff;
+font:normal Dosis, Georgia, Serif;
+color:#111;
+border:2px solid #333;
+-webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+-moz-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+}
+#box-message a.close {
+position:absolute;
+top:-10px;
+right:-10px;
+background:#fff;
+font:bold 16px Arial, Sans-Serif;
+text-decoration:none;
+line-height:22px;
+width:22px;
+text-align:center;
+color:#111;
+border:2px solid #333;
+-webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+-moz-box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+box-shadow:0px 1px 2px rgba(0,0,0,0.4);
+-webkit-border-radius:22px;
+-moz-border-radius:22px;
+border-radius:22px;
+cursor:pointer;
+}
+#twitterx {
+background: #EEF9FD;
+padding: 10px;
+text-align:center;
+border: 1px solid #C7DBE2;
+border-top: 0;
+}
+</style>
+<script type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/jquery.js"></script>
+<script type="text/javascript">
+$(window).bind("load", function() {
+// Animate Top Value When Page Loaded Completed
+$('#box-message').animate({top:"50px"}, 1000);
+// Remove Mailbox When Close Button On Click
+$('a.close').click(function() {
+$(this).parent().fadeOut();
+return false;
+});
+});
+</script>
+<div style="top: 50px; display: none;" id="box-message">
+<!-- HTML Start -->
+
+<center>
+<iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/likebox.html" style="border: medium 2px; overflow: hidden; height: 270px; width: 245px;background:#fff;" frameborder="0" scrolling="no"></iframe></center>
+<!-- HTML End -->
+<a class="close" href="#">×</a>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=HTML&amp;widgetId=HTML4&amp;action=editWidget&amp;sectionId=main" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML4"));' target="configHTML4" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+<div id="sidebarright-wrapper">
+<div class="sidebar section" id="sidebarright"><div class="widget HTML" id="HTML1">
+<h2 class="title">Fans Page</h2>
+<div class="widget-content">
+<iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/likebox_002.html" style="border:none; overflow:hidden; width:258px; height:62px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+
+
+
+
+
+
+
+
+<br>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget&amp;sectionId=sidebarright" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target="configHTML1" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML2">
+<h2 class="title">Guest Book</h2>
+<div class="widget-content">
+<!-- BEGIN CBOX - www.cbox.ws - v001 -->
+<div id="cboxdiv" style="text-align: center; line-height: 0">
+<div><iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/a_002.html" marginheight="2" marginwidth="2" allowtransparency="yes" name="cboxmain7-605538" style="border: 0px solid;" id="cboxmain7-605538" frameborder="0" height="205" scrolling="auto" width="250"></iframe></div>
+<div><iframe src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/a_003.html" marginheight="2" marginwidth="2" allowtransparency="yes" name="cboxform7-605538" style="border: 0px solid;border-top:0px" id="cboxform7-605538" frameborder="0" height="87" scrolling="no" width="250"></iframe></div>
+</div>
+<!-- END CBOX -->
+
+
+
+<!-- cinta indonesia + stikom -->
+<div style="position: fixed; bottom: 0px; left: 0px;width:110px;height:115px;"> <img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/cinta-indonesia5B15D.png" height="115" border="0" width="104"></div>
+<div style="position: fixed; bottom: 0px; right: 5px;width:110px;height:130px;">
+  <div align="right"><img src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/logo_stikom5B15D.png" height="130" border="0" width="78"></div></div>
+
+
+
+<div style="position: fixed; bottom: 0px; left: -300px;width:110px;height:115px;"><script type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/a.js"></script><div id="FJ_FL_Cont" style="position: relative; width: 1px; height: 1px; border-width: 0; padding: 0; margin: 0; position: relative;"><div id="FJ_FL_Cover" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; z-index: 2;"></div><object id="FJ_FL_Obj" type="application/x-shockwave-flash" data="Kalkulator%20Sederhana%20Menggunakan%20PHP%20|%20Serandal_files/fj.swf" style="position: absolute; left: 0px; top: 0px; width: 1px; height: 1px; z-index: 1;" height="1" width="1"><param name="wmode" value="transparent"><param name="AllowScriptAccess" value="always"><param name="movie" value="http://feedjit.com/flash/fj.swf"></object></div><style type="text/css">a.fjfcl74:visited {color: #FCC; font-size: 1px; font-family: Arial, sans-serif;} a.fjfcl74:link {color: #CCC; font-size: 1px; font-family: Arial, sans-serif;}</style><div id="FJ_TF_Cont" style="position: relative; padding: 0; margin: 0; border-width: 0px; width: 160px;"><iframe marginheight="0" marginwidth="0" name="FJIframe" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/kalkulator-sederhana-menggunakan-php.html" style="width: 170px; border-width: 0px; z-index: 1;" frameborder="0" height="305" scrolling="no" width="170"></iframe></div></div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=HTML&amp;widgetId=HTML2&amp;action=editWidget&amp;sectionId=sidebarright" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target="configHTML2" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget PopularPosts" id="PopularPosts1">
+<h2>Popular Posts</h2>
+<div class="widget-content popular-posts">
+<ul>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://serandal.blogspot.com/2012/10/contoh-program-aplikasi-penjualan-dengan-php.html" target="_blank">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/1.png" height="72" border="0" width="72">
+</a>
+</div>
+<div class="item-title"><a href="http://serandal.blogspot.com/2012/10/contoh-program-aplikasi-penjualan-dengan-php.html">Contoh Program Penjualan Sederhana Dengan PHP</a></div>
+<div class="item-snippet"> Pada postingan sebelumnya sudah saya beri 
+contoh program Kalkulator Sederhana Menggunakan PHP , kali ini akan saya
+ berikan lagi Contoh Prog...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=PopularPosts&amp;widgetId=PopularPosts1&amp;action=editWidget&amp;sectionId=sidebarright" onclick='return _WidgetManager._PopupConfig(document.getElementById("PopularPosts1"));' target="configPopularPosts1" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Attribution" id="Attribution1">
+<div class="widget-content" style="text-align: center;">
+Powered by <a href="http://www.blogger.com/" target="_blank">Blogger</a>.
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=Attribution&amp;widgetId=Attribution1&amp;action=editWidget&amp;sectionId=sidebarright" onclick='return _WidgetManager._PopupConfig(document.getElementById("Attribution1"));' target="configAttribution1" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<br>
+</div>
+<div id="sidebarleft-wrapper">
+<div class="sidebar section" id="sidebarleft"><div class="widget Label" id="Label1">
+<h2>Labels</h2>
+<div class="widget-content list-label-widget-content" style="overflow:auto; width: auto; height:115px;">
+<ul>
+<li>
+<a dir="ltr" href="http://serandal.blogspot.com/search/label/CSS">CSS</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://serandal.blogspot.com/search/label/Info">Info</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://serandal.blogspot.com/search/label/JavaScript">JavaScript</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://serandal.blogspot.com/search/label/jQuery">jQuery</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://serandal.blogspot.com/search/label/PHP">PHP</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://serandal.blogspot.com/search/label/PHP%20%26%20MySQL">PHP &amp; MySQL</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://serandal.blogspot.com/search/label/Tutorial">Tutorial</a>
+<span dir="ltr">(1)</span>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=Label&amp;widgetId=Label1&amp;action=editWidget&amp;sectionId=sidebarleft" onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target="configLabel1" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget BlogArchive" id="BlogArchive1">
+<h2>Serandal Archives</h2>
+<div class="widget-content">
+<div id="ArchiveList" style="overflow:auto; width: auto; height:130px;">
+<div id="BlogArchive1_ArchiveList">
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/search?updated-min=2013-01-01T00:00:00%2B07:00&amp;updated-max=2014-01-01T00:00:00%2B07:00&amp;max-results=7">2013</a>
+<span class="post-count" dir="ltr">(7)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2013_07_01_archive.html">July</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2013_05_01_archive.html">May</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2013_01_01_archive.html">January</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/search?updated-min=2012-01-01T00:00:00%2B07:00&amp;updated-max=2013-01-01T00:00:00%2B07:00&amp;max-results=7">2012</a>
+<span class="post-count" dir="ltr">(7)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2012_11_01_archive.html">November</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2012_10_01_archive.html">October</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="posts">
+<li><a href="http://serandal.blogspot.com/2012/10/contoh-program-aplikasi-penjualan-dengan-php.html">Contoh Program Penjualan Sederhana Dengan PHP</a></li>
+<li><a href="http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html">Kalkulator Sederhana Menggunakan PHP</a></li>
+<li><a href="http://serandal.blogspot.com/2012/10/cara-membuat-form-upload-sederhana-menggunakan-php.html">Cara Membuat Form Upload Foto Sederhana (PHP)</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2012_09_01_archive.html">September</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2012_04_01_archive.html">April</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://serandal.blogspot.com/2012_02_01_archive.html">February</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive1&amp;action=editWidget&amp;sectionId=sidebarleft" onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target="configBlogArchive1" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Followers" id="Followers1">
+<h2 class="title">Followers</h2>
+<div class="widget-content">
+<div id="Followers1-wrapper">
+<div style="margin-right:2px;">
+<script type="text/javascript">
+        if (!window.google || !google.friendconnect) {
+          document.write('<script type="text/javascript"' +
+              'src="http://www.google.com/friendconnect/script/friendconnect.js">' +
+              '</scr' + 'ipt>');
+        }
+      </script><script type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/friendconnect.js"></script>
+<script type="text/javascript">
+      if (!window.registeredBloggerCallbacks) {
+        window.registeredBloggerCallbacks = true;
+
+        
+
+        
+        gadgets.rpc.register('requestReload', function() {
+          document.location.reload();
+        });
+
+        
+        gadgets.rpc.register('requestSignOut', function(siteId) {
+          
+          google.friendconnect.container.openSocialSiteId = siteId;
+          google.friendconnect.requestSignOut();
+        });
+      }
+    </script>
+<script type="text/javascript">
+    
+    function registerGetBlogUrls() {
+      gadgets.rpc.register('getBlogUrls', function() {
+        var holder = {};
+        
+          
+            
+            
+              holder.currentPost = "http://www.blogger.com/feeds/7486360644741300760/posts/default/7462842336264476843";
+            
+            
+            
+              holder.currentComments = "http://www.blogger.com/feeds/7486360644741300760/7462842336264476843/comments/default";
+            
+            holder.currentPostUrl = "";
+            holder.currentPostId = 7462842336264476843
+          
+          
+          
+            holder.postFeed = "http://www.blogger.com/feeds/7486360644741300760/posts/default";
+          
+          
+          
+            holder.commentFeed = "http://www.blogger.com/feeds/7486360644741300760/comments/default";
+          
+          holder.currentBlogUrl = "http://serandal.blogspot.com/";
+          holder.currentBlogId = "7486360644741300760";
+        
+        return holder;
+      });
+    }
+  </script>
+<script type="text/javascript">
+  if (!window.registeredCommonBloggerCallbacks) {
+    window.registeredCommonBloggerCallbacks = true;
+
+    gadgets.rpc.register('resize_iframe', function(height) {
+      var el = document.getElementById(this['f']);
+      if (el) {
+        el.style.height = height + 'px';
+      }
+    });
+
+    
+    gadgets.rpc.register('set_pref', function() {});
+
+    registerGetBlogUrls();
+  }
+  </script>
+<div class="gadgets-gadget-container" id="div-cs9kmrh6ly3p" style="width: 100%; visibility: visible;"><div id="gfc_iframe_1201607665_0_body"><iframe id="gfc_iframe_1201607665_0" name="gfc_iframe_1201607665_0" style="width: 100%; height: 254px;" allowtransparency="true" frameborder="0" height="260" scrolling="no"></iframe></div></div>
+<script type="text/javascript">
+    var skin = {};
+    skin['FACE_SIZE'] = '32';
+    skin['HEIGHT'] = "260";
+    skin['TITLE'] = "Followers";
+    skin['BORDER_COLOR'] = "transparent";
+    skin['ENDCAP_BG_COLOR'] = "transparent";
+    skin['ENDCAP_TEXT_COLOR'] = "#000000";
+    skin['ENDCAP_LINK_COLOR'] = "#000000";
+    skin['ALTERNATE_BG_COLOR'] = "transparent";
+    
+    skin['CONTENT_BG_COLOR'] = "transparent";
+    skin['CONTENT_LINK_COLOR'] = "#000000";
+    skin['CONTENT_TEXT_COLOR'] = "#000000";
+    skin['CONTENT_SECONDARY_LINK_COLOR'] = "#FFFFFF";
+    skin['CONTENT_SECONDARY_TEXT_COLOR'] = "#000000";
+    skin['CONTENT_HEADLINE_COLOR'] = "#000000";
+    skin['FONT_FACE'] = "Arial";
+    google.friendconnect.container.setParentUrl("/");
+    google.friendconnect.container["renderMembersGadget"](
+    {id: "div-cs9kmrh6ly3p",
+     height: 260,
+     
+     
+     
+     site: "16646648505479367704",
+     
+     locale: 'en_GB' },
+     skin);
+  </script>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7486360644741300760&amp;widgetType=Followers&amp;widgetId=Followers1&amp;action=editWidget&amp;sectionId=sidebarleft" onclick='return _WidgetManager._PopupConfig(document.getElementById("Followers1"));' target="configFollowers1" title="Edit">
+<img alt="" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+</div>
+<div id="outer-wrapper">
+<div id="bottom1">
+<div class="footer-column section" id="bottom1"></div>
+</div>
+<div id="bottom2">
+<div class="footer-column section" id="bottom2"></div>
+</div>
+<div id="bottom3">
+<div class="footer-column section" id="bottom3"></div>
+</div>
+<div id="bottom4">
+<div class="footer-column section" id="bottom4"></div>
+</div>
+</div>
+</div>
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class="clear">&nbsp;</div>
+</div>
+<!-- end content-wrapper -->
+</div></div>
+<!-- end outer-wrapper -->
+<div class="creditlink"><!-- License : This template is FREE LICENSE. You are allowed modify this template as you want. A great reblogger is a blogger who respect and appreciate Blogger Template Maker with does not change and remove the credit link.Find more New Free Blogger Template Everyday at http://www.dhetemplate.com/ --><script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/pagenavi.html" type="text/javascript"></script><center><div style="border: 1px dotted #ccc; background-color: transparent; border-radius:2px; padding: 8px; width: 780px;"> Copyright © 2012
+
+
+ 
+
+
+
+- Template By <a class="" href="http://cirebon-cyber4rt.blogspot.com/" target="_blank" title="Cirebon-Cyber4rt"> Cirebon-Cyber4rt </a> - Modified by <a href="http://serandal.blogspot.com/">Serandal</a>  - Powered By <a class="" href="http://www.blogger.com/" target="_blank" title="Blogger"> Blogger </a>
+</div></center></div><script type="text/javascript">function autoLink(){ this.keywdHref = new Object(); this.add = function(keyword, href){ if(keyword.substr(0,1) != " "){keyword = " " + keyword;} this.keywdHref[keyword] = href; } this.createAnchor = function(){ var objs = document.getElementsByTagName("div"); for(var i=0; i<objs.length; i++){ var obj = objs[i]; if(obj.className.indexOf("post-body")>-1){ var content = obj.innerHTML; for(var keyword in this.keywdHref){ var href = this.keywdHref[keyword]; var newstr = content.replace(keyword, "<a href='"+href+"'>"+keyword+"</a>", "gi"); obj.innerHTML = newstr; content = newstr; } } } } this.startScript = function(){ var onLoad = window.onload; window.onload = function(){ if(onLoad){onLoad();} setTimeout("f.createAnchor()", 100); } }}</script><script type="text/javascript">var f = new autoLink();f.add("SEO", "http://serandal.blogspot.com/");f.startScript();</script>
+<!-- Add-in Script for syntax highlighting -->
+<script language="javascript">
+dp.SyntaxHighlighter.BloggerMode();
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+</div>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/3382611946-widgets.js"></script>
+<script gapi_processed="true" type="text/javascript" src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/plusone.js"></script>
+<script type="text/javascript">
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '7486360644741300760';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d7486360644741300760','//serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html','7486360644741300760');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '7486360644741300760', 'bloggerUrl': 'http://www.blogger.com', 'title': 'Serandal', 'pageType': 'item', 'url': 'http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html', 'canonicalUrl': 'http://serandal.blogspot.com/2012/10/kalkulator-sederhana-menggunakan-php.html', 'canonicalHomepageUrl': 'http://serandal.blogspot.com/', 'homepageUrl': 'http://serandal.blogspot.com/', 'blogspotFaviconUrl': 'http://serandal.blogspot.com/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': 'Kalkulator Sederhana Menggunakan PHP', 'pageTitle': 'Serandal: Kalkulator Sederhana Menggunakan PHP', 'encoding': 'UTF-8', 'locale': 'en_GB', 'localeUnderscoreDelimited': 'en_gb', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Serandal - Atom\42 href\75\42http://serandal.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Serandal - RSS\42 href\75\42http://serandal.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Serandal - Atom\42 href\75\42http://www.blogger.com/feeds/7486360644741300760/posts/default\42 /\76\n\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Serandal - Atom\42 href\75\42http://serandal.blogspot.com/feeds/7462842336264476843/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'postImageThumbnailUrl': 'http://3.bp.blogspot.com/-VGpqY6z-eWY/UH648q2qpRI/AAAAAAAAAC8/SzLKRqTQfx0/s72-c/calc.PNG', 'imageSrcTag': '\74link rel\75\42image_src\42 href\75\42http://3.bp.blogspot.com/-VGpqY6z-eWY/UH648q2qpRI/AAAAAAAAAC8/SzLKRqTQfx0/s72-c/calc.PNG\42 /\76\n', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,e\75\42jstiming\42,g\75\42tick\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){c\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[c,d]};this[g](\42start\42,null,a)}var a\75new d;b.jstiming\75{Timer:d,load:a};if(b.performance\46\46b.performance.timing){var a\75b.performance.timing,c\75b[e].load,f\75a.navigationStart,a\75a.responseStart;0\74f\46\46a\76\75f\46\46(c[g](\42_wtsrt\42,void 0,f),c[g](\42wtsrt_\42,\42_wtsrt\42,a),c[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,b.chrome\46\46b.chrome.csi\46\46(a\75Math.floor(b.chrome.csi().pageT),c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.chrome.csi().startE),\nc[g](\42tbnd_\42,\42_tbnd\42,f))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,c\46\0460\74f\46\46(c[g](\42_tbnd\42,void 0,b.external.startE),c[g](\42tbnd_\42,\42_tbnd\42,f))),a\46\46(b[e].pt\75a)}catch(l){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[e].load[g](\42aft\42)};var h\75!1;function k(){h||(h\75!0,b[e].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,k,!1):b.attachEvent(\42onscroll\42,k);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/15de8d1bfc9ff1d1', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n', 'tf': ''}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'header-right', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebarleft', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebarleft', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FollowersView', new _WidgetInfo('Followers1', 'sidebarleft', null, document.getElementById('Followers1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebarright', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebarright', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebarright', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'sidebarright', null, document.getElementById('Attribution1'), {'attribution': 'Powered by \74a href\75\47http://www.blogger.com\47 target\75\47_blank\47\76Blogger\74/a\76.'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/1586594539-lbx__en_gb.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/4138445517-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'main', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'null', null, document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'href': 'http://serandal.blogspot.com/', 'title': 'Beranda', 'isCurrentPage': false}], 'mobile': false}, 'displayModeFull'));
+</script>
+<link href="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/4138445517-lightbox_bundle.css" rel="stylesheet" type="text/css"><script src="Kalkulator%20Sederhana%20Menggunakan%20PHP%20%7C%20Serandal_files/1586594539-lbx__en_gb.js" type="text/javascript"></script></body></html>
