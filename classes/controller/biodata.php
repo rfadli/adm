@@ -455,7 +455,7 @@ class biodata
 		else
 		{
 			$fw->set('no', '');
-			$fw->set('surat_kotrak', '');
+			$fw->set('surat_kontrak', '');
 			$fw->set('no_npwp', '');
 			$fw->set('golongan_darah', '');
 			$fw->set('pendidikan_terakhir', '');

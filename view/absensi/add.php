@@ -33,6 +33,7 @@
       <li><a href="/biodata/index">BIODATA</a></li>
       <li><a href="/jabatan/index">JABATAN</a></li>
       <li><a href="/departement/index">DEPARTEMENT</a></li>
+      <li><a href="/absensi/index">ABSENSI</a></li>
       <!--li><a href="/agama/index">AGAMA</a></li-->
     </ul>
     <!--form class="navbar-form navbar-left" role="search">
@@ -78,11 +79,11 @@
 		    <div class="col-sm-4">
 			<?php
 			echo '<span class="field"><input type="text" name="jam_masuk" class="form-control input-sm" value="'.$jam_masuk.'" /></span>';
-			if(isset($error_masuk))
+			if(isset($error_jam_masuk))
 			{
 				echo '<span class="error">';
 				echo '<div style="color:red">';
-				echo $error_masuk;
+				echo $error_jam_masuk;
 				echo '</div>';
 				echo '</span>';
 			}
@@ -97,11 +98,11 @@
 		    <div class="col-sm-4">
 			<?php
 			echo '<span class="field"><input type="text" name="jam_keluar" class="form-control input-sm" value="'.$jam_keluar.'" /></span>';
-			if(isset($error_keluar))
+			if(isset($error_jam_keluar))
 			{
 				echo '<span class="error">';
 				echo '<div style="color:red">';
-				echo $error_keluar;
+				echo $error_jam_keluar;
 				echo '</div>';
 				echo '</span>';
 			}
@@ -119,6 +120,7 @@
 	   
 		</center>
 		</form>
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 		<div id="footer">
 	      <div class="container">
 	        <p class="text-muted">Copyright 2013. Digibeat - Absensi. All Rights Reserved.</p>

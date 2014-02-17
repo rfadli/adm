@@ -39,6 +39,7 @@
       <li><a href="/biodata/index">BIODATA</a></li>
       <li><a href="/jabatan/index">JABATAN</a></li>
       <li><a href="/departement/index">DEPARTEMENT</a></li>
+      <li><a href="/absensi/index">ABSENSI</a></li>
       <!--li><a href="/agama/index">AGAMA</a></li-->
     </ul>
     <form class="navbar-form navbar-left" role="search">

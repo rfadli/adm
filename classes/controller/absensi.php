@@ -33,53 +33,64 @@ class absensi
 	{
 		$fw = Base::instance();
 		
-		if(!empty($_POST))
+		if (!empty($_POST))
 		{
 			$nama = $fw->get("POST.nama");
 			$jam_masuk = $fw->get("POST.jam_masuk");
 			$jam_keluar = $fw->get("POST.jam_keluar");
 			
-			$pemerikasaan = TRUE;
-			
-			if($nama = "")
-			{
-				$pemerikasaan = FALSE;
-				$fw->set("error_nama", "Nama Harus Di isi");
-			}
-			
-			if($jam_masuk = "")
-			{
-				$pemerikasaan = FALSE;
-				$fw->set("error_masuk", "Jam Masuk Harus Di isi");
-			}
-			
-			if($jam_keluar = "")
-			{
-				$pemerikasaan = FALSE;
-				$fw->set("error_keluar", "Jam Keluar Harus Di isi");
-			}
-			//--------------------------------------
-			if(!$pemeriksaan)
-			{
-				$fw->set("nama", $nama);
-				$fw->set("jam_masuk", $jam_masuk);
-				$fw->set("jam_keluar", $jam_keluar);
-			}
-			//--------------------------------------
-			if($pemeriksaan)
-			{
-				$m = New MongoClient();
-				$db = $m->karyawan;
-				$collection = $db->absensi;
 				
-				$data = array(
+			//---------blok pemeriksaan-------------//
+			
+			$datakaryawan = TRUE;
+			
+			if($nama == '')
+			{
+				$datakaryawan = FALSE;
+				
+				$error_nama = " *Nama harus di isi";
+				$fw->set('error_nama', $error_nama);
+			}
+			if($jam_masuk == '')
+			{
+				$datakaryawan = FALSE;
+				
+				$error_jam_masuk = " *Jam masuk harus di isi";
+				$fw->set('error_jam_masuk', $error_jam_masuk);
+			}
+			if($jam_keluar == '')
+			{
+				$datakaryawan = FALSE;
+				
+				$error_jam_keluar = " *Jam keluar harus di isi";
+				$fw->set('error_jam_keluar', $error_jam_keluar);
+			}
+			
+			//----------blok pemilihan--------------//
+			
+			if (!$datakaryawan) // blok yg belum di isi 
+			{
+				$fw->set('nama', $nama);
+				$fw->set('jam_masuk', $jam_masuk);
+				$fw->set('jam_keluar', $jam_keluar);
+			}
+			
+			// blok yg sudah di isi
+			if ($datakaryawan)
+			{
+				$local = new MongoClient();
+				
+				$db = $local->karyawan;
+				$ag = $db->absensi;
+				$data = array (
 					'nama' => $nama,
 					'jam_masuk' => $jam_masuk,
 					'jam_keluar' => $jam_keluar,
 				);
-				$collection->insert($data);
-				$fw->reriute("/absensi/index");
- 			}
+				$ag->insert($data);
+				$fw->reroute("/absensi/index");
+			}
+			
 		}
 		else
 		{
@@ -88,11 +99,10 @@ class absensi
 			$fw->set('jam_keluar', '');
 		}
 		
-	$fw->set('link', "/absensi/add");
-	
-	$ww = View::instance()->render("absensi/add.php"); 
-	echo $ww;
-	
+		$fw->set('link', '/absensi/add');
+		$view = View::instance()->render("absensi/add.php"); 
+		echo $view;
+		
 	}
 	
 	public function edit()
@@ -100,71 +110,82 @@ class absensi
 		$fw = Base::instance();
 		
 		$id = $fw->get('GET["id"]');
-		$m = new MongoClient();
-		$db = $m->karyawan;
-		$collection = $db->absensi;
-		$mcollection = $collection->findOne(array('_id' => new MongoId($id)));
 		
-		if(!empty($_POST))
+		$local = new MongoClient();
+		$db = $local->karyawan;
+		$ag = $db->absensi;
+		$sag = $ag->findOne(array('_id' => new MongoId($id)));
+		
+		if (!empty($_POST))
 		{
 			$nama = $fw->get("POST.nama");
 			$jam_masuk = $fw->get("POST.jam_masuk");
-			$jam_keluar = $fw->get("POST.jam_keluar");	
-		}
-		
-		$pemeriksaan = TRUE;
-		
-		if($nama = "")
-		{
-			$pemeriksaan = FALSE;
-			$fw->set("error_nama", "Nama Harus Di isi");
-		}
-		
-		if($jam_masuk = "")
-		{
-			$pemeriksaan = FALSE;
-			$fw->set("error_masuk", "Jam Masuk Harus Di isi");
-		}
-		
-		if($jam_keluar = "")
-		{
-			$pemeriksaan = FALSE;
-			$fw->set("error_keluar", "Jam Keluar Harus Di isi");
-		}
-		//-------------------------------------
-		if(!$pemeriksaan)
-		{
-			$fw->set("nama", $nama);
-			$fw->set("jam_masuk", $jam_masuk);
-			$fw->set("jam_keluar", $jam_keluar);
-		}
-		//------------------------------------
-		if($pemeriksaan)
-		{
-			$m = new MongoClient();
-			$db = $m->karyawan;
-			$collection = $db->absensi;
+			$jam_keluar = $fw->get("POST.jam_keluar");
+				
+			//---------blok pemeriksaan-------------//
 			
-			$data = array(
-				'nama' => $nama,
-				'jam_masuk' => $jam_masuk,
-				'jam_keluar' => $jam_keluar,
-			);
-			$collection->update(array('_id' => new MongoId($id)), array('$set' => $data));
-			$fw->reroute("/absensi/index");
+			$datakaryawan = TRUE;
+			
+			if($nama == '')
+			{
+				$datakaryawan = FALSE;
+				
+				$error_nama = " *Nama harus di isi";
+				$fw->set('error_nama', $error_nama);
+			}
+			if($jam_masuk == '')
+			{
+				$datakaryawan = FALSE;
+				
+				$error_jam_masuk = " *Jam masuk harus di isi";
+				$fw->set('error_jam_masuk', $error_jam_masuk);
+			}
+			if($jam_keluar == '')
+			{
+				$datakaryawan = FALSE;
+				
+				$error_jam_keluar = " *Jam keluar harus di isi";
+				$fw->set('error_jam_keluar', $error_jam_keluar);
+			}
+			
+			//----------blok pemilihan--------------//
+			
+			if (!$datakaryawan) // blok yg belum di isi 
+			{
+				$fw->set('nama', $nama);
+				$fw->set('jam_masuk', $jam_masuk);
+				$fw->set('jam_keluar', $jam_keluar);
+			}
+			
+			// blok yg sudah di isi
+			if ($datakaryawan)
+			{
+				$local = new MongoClient();
+				
+				$db = $local->karyawan;
+				$ag = $db->absensi;
+				$data = array (
+					'nama' => $nama,
+					'jam_masuk' => $jam_masuk,
+					'jam_keluar' => $jam_keluar,
+				);
+				
+				$newdata = array('$set' => $data);
+				$ag->update(array("_id" => new MongoId($id)), $newdata);
+				$fw->reroute("/absensi/index");
+			}
+			
 		}
 		else
 		{
-			$fw->set('nama', $collection['nama']);
-			$fw->set('jam_masuk', $collection['jam_masuk']);
-			$fw->set('jam_keluar', $collection['jam_keluar']);
+			$fw->set('nama', $sag['nama']);
+			$fw->set('jam_masuk', $sag['jam_masuk']);
+			$fw->set('jam_keluar', $sag['jam_keluar']);
 		}
-	
-	$fw->set('link', "/absensi/add");
-	
-	$ww = View::instance()->render("absensi/add.php"); 
-	echo $ww;
 		
+		$fw->set('link', '/absensi/edit?id='.$id);
+		$view = View::instance()->render("absensi/add.php"); 
+		echo $view;
 	}
 }
 ?>

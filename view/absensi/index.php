@@ -39,6 +39,7 @@
       <li><a href="/biodata/index">BIODATA</a></li>
       <li><a href="/jabatan/index">JABATAN</a></li>
       <li><a href="/departement/index">DEPARTEMENT</a></li>
+      <li><a href="/absensi/index">ABSENSI</a></li>
     </ul>
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
@@ -85,32 +86,43 @@
 		?>
 		</table>
 		</td>
-		</div>
 		<?php
 		echo '<ul class="pagination">';
 		if($page > 1)
 		{
-	    echo '<li>'.'<a href="?page=' . $prev . '">PREVIOUS</a>'.'</li>';
-		    if($page * $limit_doc )
-		    {
-		        echo '<li>'.' <a href="?page=' . $next . '"> NEXT</a>'.'</li>';
-		    }
-		} 
-		else 
-		{
-		    if($page * $limit_doc ) 
-		    {
-		        echo '<li>'.' <a href="?page=' . $next . '"> NEXT</a>'.'</li>';
-		   }
+		echo '<a href="?page=' . $prev . '" ><input style="cursor:pointer;border:1px black solid;border-radius:5px;width:120px;height:30px;font-size:15px;" type="button" value=" Previous "></a>';
 		}
-		echo 'page';
+	
+		for($i=1;$i<$limit_doc;$i++)
+		{
+			if($page == $i)
+			{
+				echo ' <input style="border:2px black solid;border-radius:5px;width:30px;height:30px;color:black;font-size:15px;" type="button" value="'.$i.'"> ';
+			}
+			else
+			{
+			echo '<a href="?page=' . $i . '"> <input style="cursor:pointer;border:1px black solid;border-radius:5px;width:30px;height:30px;font-size:15px;" type="button" value="'.$i.'"></a>';
+			}
+		}
+		
+		if($page * $limit_doc)
+		{
+			echo '<a href="?page=' . $next . '""><input style="cursor:pointer;border:1px black solid;border-radius:5px;width:90px;height:30px;font-size:15px;" type="button" value="  Next "></a>';
+		}
+		else
+		{
+		 echo '<input style="border:1px black solid;border-radius:5px;width:90px;height:30px;color:black;font-size:15px;" type="button" value="   Next ">';
+		}
 		echo '</ul>';
 		?>
-		
-		<?php echo Base::instance()->raw($page); ?>
+		<?php
+		echo 'Page ';
+		echo Base::instance()->raw($page); 
+		?>
+		</div>
 		</div>
 		</form>
-		
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 	<div id="footer">
       <div class="container">
         <p class="text-muted">Copyright 2013. Digibeat - Absensi. All Rights Reserved.</p>
