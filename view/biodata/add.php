@@ -81,10 +81,10 @@
 	
 	<p>
 		<div class="form-group">
-	    <label for="inputPassword3" class="col-sm-5 control-label">NIK</label>
+	    <label for="inputPassword3" class="col-sm-5 control-label">NO</label>
 	    <div class="col-sm-3">
 		<?php
-		echo '<input type="text" name="nik" class="form-control" value="'.$nik.'"/>';
+		echo '<input type="text" name="nik" class="form-control" value="'.$no.'"/>';
 		?>
 		</div>
 		</div>
@@ -451,6 +451,19 @@
 		}
 		echo '</span>';
 		echo '</select>';
+		?>
+		</div>
+		</div>
+	</p>
+	
+	<p>
+		<div class="form-group">
+	    <label for="inputPassword3" class="col-sm-5 control-label">No Surat Kontrak</label>
+	    <div class="col-sm-3">
+		<?php
+		echo '<div class="input-group">';
+		echo '<span class="field"><input type="text" name="surat_kontrak" class="form-control" value="'.$surat_kontrak.'" /></span>';
+		echo '</div>';
 		?>
 		</div>
 		</div>

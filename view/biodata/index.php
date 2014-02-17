@@ -65,17 +65,18 @@
        	
        	<thead>
 			<tr>
-				<th><center><b>NIK</b></center></th>
+				<th><center><b>NO</b></center></th>
 				<th><center><b>NAMA</b></center></th>
-				<th><center><b>ALAMAT</b></center></th>
+				<!--th><center><b>ALAMAT</b></center></th-->
 				<!--th><center><b>TEMPAT LAHIR</b></center></th>
 				<th><center><b>TANGGAL LAHIR</b></center></th-->
-				<th><center><b>AGAMA</b></center></th>
-				<th><center><b>JENIS KELAMIN</b></center></th>
+				<!--th><center><b>AGAMA</b></center></th>
+				<th><center><b>JENIS KELAMIN</b></center></th!-->
 				<th><center><b>JABATAN</b></center></th>
 				<!--th><center><b>DEPARTEMENT</b></center></th-->
-				<th><center><b>EMAIL</b></center></th>
-				<th><center><b>PHONE</b></center></th>
+				<th><center><b>MULAI KERJA</b></center></th>
+				<th><center><b>STATUS PEGAWAI</b></center></th>
+				<th><center><b>NO SURAT KONTRAK</b></center></th>
 				<!--td><center>Mulai Kerja</center></td>
 				<!--<td><center>Foto</center></td>-->
 				<th><center>&nbsp;</center></th>
@@ -88,13 +89,14 @@
 		$ddep = $db->departement;
 		$ag = $db->agama;
 		$bul = $db->bulan;
+		$statpegg = $db->status_pegawai;
 		
 		foreach ($data as $dat)
 		{
 			echo '<tr>';
-			echo '<td>'.'<center>'.$dat['nik'].'</center>'.'</td>';
+			echo '<td>'.'<center>'.$dat['no'].'</center>'.'</td>';
 			echo '<td>'.'<center>'.$dat['nama'].'</center>'.'</td>';
-			echo '<td>'.'<center>'.$dat['alamat'].'</center>'.'</td>';
+			//echo '<td>'.'<center>'.$dat['alamat'].'</center>'.'</td>';
 			//echo '<td>'.'<center>'.$dat['tlahir'].'<center>'.'</td>';
 			//echo '<td>'.'<center>'.$dat['tanggal']." ".$dat['bulan']." ".$dat['birthday'].'</center>','</td>';
 			//echo '<td>'.'<center>'.$dat['tlahir'].","." ".$dat['birthday'].'</center>'.'</td>';
@@ -108,7 +110,7 @@
 				echo '<td></td>';
 			}*/
 			//echo '<td>'.$dat['birthday'].'</td>';
-			if(isset($dat['agama']))
+			/*if(isset($dat['agama']))
 			{
 				$cek = $ag->findOne(array('_id' => new MongoId($dat['agama'])));
 				echo '<td>'.'<center>'.$cek['agama'].'</center>'.'</td>';
@@ -117,7 +119,7 @@
 				echo '<td></td>';
 			}
 			
-			echo '<td>'.'<center>'.$dat['jenis_kelamin'].'</center>'.'</td>';
+			echo '<td>'.'<center>'.$dat['jenis_kelamin'].'</center>'.'</td>';*/
 			
 			if(isset($dat['jabatan']))
 			{
@@ -135,8 +137,16 @@
 			else {
 				echo '<td></td>';
 			}*/
-			echo '<td>'.'<center>'.$dat['email'].'</center>'.'</td>';
-			echo '<td>'.'<center>'.$dat['telephone'].'</center>'.'</td>';
+			echo '<td>'.'<center>'.$dat['work_in'].' '.$dat['bulan_kerja'].' '.$dat['tahun_kerja'].'</center>'.'</td>';
+			if(isset($dat['status_pegawai']))
+			{
+				$statpeggs = $statpegg->findOne(array('_id' => new MongoId($dat['status_pegawai'])));
+				echo '<td>'.'<center>'.$statpeggs['status_pegawai'].'</center>'.'</td>';
+			}
+			else {
+				echo '<td></td>';
+			}
+			echo '<td>'.'<center>'.$dat['surat_kontrak'].'</center>'.'</td>';
 			//echo '<td>'.$dat['work_in'].'</td>';
 			//echo '<td>'.$dat['foto'].'</td>';
 			echo '<td>';

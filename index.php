@@ -3,6 +3,7 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 'On');
 session_set_cookie_params('3600');
 //ini_set('session.gc_maxlifetime', 60*60*24);
+
 date_default_timezone_set('Asia/Jakarta');
 define('DOCROOT', realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR);
 $f3=require('lib/base.php');

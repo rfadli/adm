@@ -40,7 +40,8 @@ class biodata
 		{
 			//echo $_FILES['foto']['name'];
 			//die;
-			$nik = $fw->get("POST.nik");
+			$no = $fw->get("POST.no");
+			$surat_kontrak = $fw->get("POST.surat_kontrak");
 			$no_npwp = $fw->get("POST.no_npwp");
 			$golongan_darah = $fw->get("POST.golongan_darah");
 			$pendidikan_terakhir = $fw->get("POST.pendidikan_terakhir");
@@ -277,7 +278,8 @@ class biodata
 			
 			if (!$datakaryawan) // blok yg belum di isi 
 			{
-				$fw->set('nik', $nik);
+				$fw->set('no', $no);
+				$fw->set('surat_kontrak', $surat_kontrak);
 				$fw->set('no_npwp', $no_npwp);
 				$fw->set('golongan_darah', $golongan_darah);
 				$fw->set('pendidikan_terakhir', $pendidikan_terakhir);
@@ -374,7 +376,8 @@ class biodata
 				
 				$bio = $db->biodata;
 				$data = array (
-					'nik' => $nik,
+					'no' => $no,
+					'surat_kontrak' => $surat_kontrak,
 					'no_npwp' => $no_npwp,
 					'golongan_darah' => $golongan_darah,
 					'pendidikan_terakhir' => $pendidikan_terakhir,
@@ -451,7 +454,8 @@ class biodata
 		}
 		else
 		{
-			$fw->set('nik', '');
+			$fw->set('no', '');
+			$fw->set('surat_kotrak', '');
 			$fw->set('no_npwp', '');
 			$fw->set('golongan_darah', '');
 			$fw->set('pendidikan_terakhir', '');
@@ -535,7 +539,8 @@ class biodata
 		
 		if (!empty($_POST))
 		{
-			$nik = $fw->get("POST.nik");
+			$no = $fw->get("POST.no");
+			$surat_kontrak = $fw->get("POST.surat_kontrak");
 			$no_npwp = $fw->get("POST.no_npwp");
 			$golongan_darah = $fw->get("POST.golongan_darah");
 			$pendidikan_terakhir = $fw->get("POST.pendidikan_terakhir");
@@ -745,7 +750,8 @@ class biodata
 			
 			if (!$datakaryawan) // blok yg belum di isi 
 			{
-				$fw->set('nik', $nik);
+				$fw->set('no', $no);
+				$fw->set('surat_kontrak', $surat_kontrak);
 				$fw->set('no_npwp', $no_npwp);
 				$fw->set('golongan_darah', $golongan_darah);
 				$fw->set('pendidikan_terakhir', $pendidikan_terakhir);
@@ -840,7 +846,8 @@ class biodata
 				
 				$bio = $db->biodata;
 				$data = array (
-					'nik' => $nik,
+					'no' => $no,
+					'surat_kontrak' => $surat_kontrak,
 					'no_npwp' => $no_npwp,
 					'golongan_darah' => $golongan_darah,
 					'pendidikan_terakhir' => $pendidikan_terakhir,
@@ -917,7 +924,8 @@ class biodata
 		}
 		else
 		{
-			$fw->set('nik', $mbio['nik']);
+			$fw->set('no', $mbio['no']);
+			$fw->set('surat_kontrak', $mbio['surat_kontrak']);
 			$fw->set('no_npwp', $mbio['no_npwp']);
 			$fw->set('golongan_darah', $mbio['golongan_darah']);
 			$fw->set('pendidikan_terakhir', $mbio['pendidikan_terakhir']);
@@ -1009,7 +1017,8 @@ class biodata
 		
 		if (!empty($_POST))
 		{
-			$nik = $fw->get("POST.nik");
+			$no = $fw->get("POST.no");
+			$surat_kontrak = $fw->get("POST.surat_kontrak");
 			$no_npwp = $fw->get("POST.no_npwp");
 			$golongan_darah = $fw->get("POST.golongan_darah");
 			$pendidikan_terakhir = $fw->get("POST.pendidikan_terakhir");
@@ -1087,7 +1096,8 @@ class biodata
 			//----------blok pemilihan--------------//
 			if (!$datakaryawan) // blok yg belum di isi 
 			{
-				$fw->set('nik', $nik);
+				$fw->set('no', $no);
+				$fw->set('surat_kontrak', $surat_kontrak);
 				$fw->set('no_npwp', $no_npwp);
 				$fw->set('golongan_darah', $golongan_darah);
 				$fw->set('pendidikan_terakhir', $pendidikan_terakhir);
@@ -1184,7 +1194,8 @@ class biodata
 				$bio = $db->biodata;
 				
 				$data = array (
-					'nik' => $nik,
+					'no' => $no,
+					'surat_kontrak' => $surat_kontrak,
 					'no_npwp' => $no_npwp,
 					'golongan_darah' => $gologan_darah,
 					'pendidikan_terakhir' => $pendidikan_terakhir,
@@ -1261,7 +1272,8 @@ class biodata
 		}
 		else
 		{
-			$fw->set('nik', $mbio['nik']);
+			$fw->set('no', $mbio['no']);
+			$fw->set('surat_kontrak', $mbio['surat_kontrak']);
 			$fw->set('no_npwp', $mbio['no_npwp']);
 			$fw->set('golongan_darah', $mbio['golongan_darah']);
 			$fw->set('pendidikan_terakhir', $mbio['pendidikan_terakhir']);

@@ -92,9 +92,9 @@
 		</p>
 		
 		<p>
-		    <label>NIK :</label>
+		    <label>NO :</label>
 			<?php
-				echo $nik;
+				echo $no;
 			?>
 		</p>
 
@@ -214,6 +214,13 @@
 			$mstatpegg = $statpegg->findOne(array('_id' => new MongoId($status_pegawai)));
 			
 			echo $mstatpegg['status_pegawai'];
+			?>
+		</p>
+		
+		<p>
+		    <label>No Surat Kontrak :</label>
+			<?php
+				echo $surat_kontrak;
 			?>
 		</p>
 	
